@@ -29,6 +29,7 @@
     --gris-moyen2: #8f8e8e;
     --gris-fonce:#474747;
     --grisclair: #f6f6f6;
+    --couleurvalide: rgb(165, 243, 223);
 }
 
 
@@ -47,13 +48,20 @@ font-family:'Roboto-Regular';
     h3{
         font-size: 14px;
     }
+
+    h4{
+        margin: 5px 0px 0px 0px;
+    }
 }
 
+header{
+    background-color: white;
+}
 
 #localisation{
     background-color:var(--gris-moyen);
     display: flex;
-    box-shadow: inset 0px 5px 0px 0px var(--gris-moyen2);  
+    box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.1) inset;  
 
         .fas{
             margin: 15px 30px 0px 0px;
@@ -122,6 +130,8 @@ background-color:var(--grisclair) ;
     height: 50px;
     margin: auto;
     text-decoration: none;
+    text-align: center;
+    padding-top: 50px;
 
     .linear-gradient {
         background: linear-gradient( var(--couleur2), var(--couleur1));
@@ -153,7 +163,7 @@ background-color:var(--grisclair) ;
     }
 
     .logo_nouveau{
-        background-color: rgb(157, 233, 213);
+        background-color: var(--couleurvalide);
         padding: 8px;
         font-size: 12px;
         font-family: 'Roboto-Bold';
@@ -196,7 +206,51 @@ background-color:var(--grisclair) ;
 
 }
 
+#menu{
+    background-color: var(--grisclair);
+    border-radius: 30px 30px 0px 0px;
+    padding: 10px 0px 100px 0px;
+    
+    .fa-heart {
+        float: right;
+        padding: 20px 20px 50px 50px;
+        
+    }
+    
+    #titre-menu{
+        font-family: 'Shrikhand';
+        font-size: 25px;
+        padding: 20px 0px 0px 20px;
+    }
+    
+
+        .sous-titre-menu{
+            font-size: 14px;
+            
+            border-bottom: 3px solid var(--couleurvalide);
+            width: 30px;
+            margin: 15px;
+            
+        }
+
+        .choix_assiette{
+            box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+            background-color: white;
+            border-radius: 20px 20px 20px 20px;
+            padding: 10px;
+            margin: 10px 10px 10px 10px;
+            font-size: 14px;
+
+            .prix{
+                float: right;
+                margin-top: -20px;
+            }
+        }
+}
+
+
 footer{
+    
     padding-top: 50px;
     background-color: var(--gris-fonce);
     color: white;
