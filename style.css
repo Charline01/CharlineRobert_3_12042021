@@ -306,4 +306,35 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
+/*----------------RESPONSIVE tablette ----------------------*/
+@media all and (min-width: 640px) and (max-width: 1200px) {
+  body {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*----------------RESPONSIVE PC ----------------------*/
+@media all and (min-width: 1200px) and (max-width: 2600px) {
+  body {
+    width: 50%;
+    margin: auto;
+  }
+  #menu .sous-titre-menu {
+    margin: auto;
+  }
+  #menu .choix_assiette {
+    width: 50%;
+    margin: auto;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  li {
+    padding-right: 10%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

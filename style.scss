@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face{
 	font-family: 'Shrikhand';
 	src: url('typo/Shrikhand-Regular.ttf') format('truetype');
@@ -306,3 +307,353 @@ footer{
         }
 }
 
+/*----------------RESPONSIVE tablette ----------------------*/
+
+@media all and (min-width: 640px) and (max-width: 1200px)
+{
+    body{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/*----------------RESPONSIVE PC ----------------------*/
+
+@media all and (min-width: 1200px) and (max-width: 2600px)
+{
+    body{
+        width: 50%;
+        margin: auto;
+    }
+
+    #menu{
+
+        .sous-titre-menu{
+            margin: auto;
+        }
+        
+        .choix_assiette{
+            width: 50%;
+            margin: auto;
+        }
+    }
+
+    footer ul{
+        
+        display: flex;
+    }
+
+    li{
+        padding-right: 10%;
+    }
+}
+=======
+@font-face{
+	font-family: 'Shrikhand';
+	src: url('typo/Shrikhand-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face{
+	font-family: 'Roboto-Regular';
+	src: url('typo/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Roboto-Light';
+	src: url('typo/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Roboto-Bold';
+	src: url('typo/Roboto-Bold.ttf') format('truetype');
+}
+
+:root
+{
+    --couleur1:#9356DC;
+    --couleur1clair:#f7ddfa;
+    --couleur2:#FF79DA;
+    --couleur3:#99E2D0;
+    --gris-moyen: #eaeaea;
+    --gris-moyen2: #8f8e8e;
+    --gris-fonce:#474747;
+    --grisclair: #f6f6f6;
+    --couleurvalide: rgb(165, 243, 223);
+}
+
+
+body{
+font-family:'Roboto-Regular';
+
+    h1{
+        font-family: 'Shrikhand';
+        text-align: center;
+    }
+    h2{
+    font-size: 26px;
+    font-family: 'Roboto-Bold';
+    }
+
+    h3{
+        font-size: 14px;
+    }
+
+    h4{
+        margin: 5px 0px 0px 0px;
+    }
+}
+
+header{
+    background-color: white;
+}
+
+#localisation{
+    background-color:var(--gris-moyen);
+    display: flex;
+    box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.1) inset;  
+
+        .fas{
+            margin: 15px 30px 0px 0px;
+            margin-left: 25%;
+            color: black;
+        }
+}
+
+#presentation_site, #restaurants_liste_acceuil{
+    padding: 30px;
+}
+
+#presentation_site, .choix_etape, #restaurants_liste_acceuil{
+background-color:var(--grisclair) ;
+}
+
+.choix_etape{
+    background-color:var(--grisclair) ;
+    display: flex;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px var(--gris-moyen);
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 20px;
+    height: 60px;
+    
+    .fas{
+        color: var(--gris-moyen2);
+        margin-right: 20px;
+        padding-top: 15px;
+    }
+
+    .chiffre
+    {
+        font-size: 12px;
+        text-align: center;
+        color: white;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        background:var(--couleur1); 
+        margin-right: 20px;
+        margin-top: 15px;
+        margin-left: -10px;
+    }
+
+    &:hover{
+        background-color: var(--couleur1clair);
+        
+            .fas{
+               color: #9356DC; 
+            }
+
+    }
+}
+
+#presentation_site{
+    text-align: center;
+}
+
+.btn_principal{
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 50px;
+
+    .linear-gradient {
+        background: linear-gradient( var(--couleur2), var(--couleur1));
+        border-radius: 30px;
+        padding: 15px;
+      }
+     
+    a{
+        text-decoration:none;
+        color: white;
+    }
+}
+
+.carte_restaurant{
+    background-color: white;
+    height: 250px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+    
+    p, h4{
+        margin: 10px;
+    }
+
+    .far, .logo_nouveau{
+        display: flex;
+        float: right;
+        padding-right: 20px;
+    }
+
+    .logo_nouveau{
+        background-color: var(--couleurvalide);
+        padding: 8px;
+        font-size: 12px;
+        font-family: 'Roboto-Bold';
+        color: rgb(21, 158, 112);
+        margin: 20px;
+    }
+
+    .restaurant_description{
+        padding-left: 20px;
+    }
+
+    #la_palette, #la_note, #la_francaise, #le_delice{
+        height: 70%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 30%, 60%;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    #la_palette{
+        background-image: url('Maquettes Ohmyfood/images/restaurants/la_palette.JPG');
+    }
+
+    #la_note{
+        background-image: url('Maquettes Ohmyfood/images/restaurants/la_note.JPG');
+    }
+
+    #la_francaise{
+        background-image: url('Maquettes Ohmyfood/images/restaurants/la_francaise.JPG');
+    }
+
+    #le_delice{
+        background-image: url('Maquettes Ohmyfood/images/restaurants/le_delice.JPG');
+    }
+
+    a{
+        text-decoration: none;
+        color:black;
+    }
+
+}
+
+#menu{
+    background-color: var(--grisclair);
+    border-radius: 30px 30px 0px 0px;
+    padding: 10px 0px 100px 0px;
+    margin-top: -50px;
+    
+    .fa-heart {
+        float: right;
+        padding: 20px 20px 50px 50px;
+        
+    }
+    
+    #titre-menu{
+        font-family: 'Shrikhand';
+        font-size: 25px;
+        padding: 20px 0px 0px 20px;
+    }
+    
+
+        .sous-titre-menu{
+            font-size: 14px;
+            
+            border-bottom: 3px solid var(--couleurvalide);
+            width: 30px;
+            margin: 15px;
+            
+        }
+
+        .choix_assiette{
+            box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+            background-color: white;
+            border-radius: 20px 20px 20px 20px;
+            padding: 10px;
+            margin: 10px 10px 10px 10px;
+            font-size: 14px;
+
+            .prix{
+                float: right;
+                margin-top: -20px;
+            }
+        }
+}
+
+.la_palette_img_bg, .la_note_img_bg, .le_delice_img_bg, .la_francaise_img_bg{
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30%, 60%;
+}
+
+.la_note_img_bg{
+    background-image: url('Maquettes Ohmyfood/images/restaurants/la_note.JPG');
+}
+
+.la_palette_img_bg{
+    background-image: url('Maquettes Ohmyfood/images/restaurants/la_palette.JPG');
+}
+
+.le_delice_img_bg{
+    background-image: url('Maquettes Ohmyfood/images/restaurants/le_delice.JPG');
+}
+.la_francaise_img_bg{
+    background-image: url('Maquettes Ohmyfood/images/restaurants/la_francaise.JPG');
+}
+
+
+footer{
+    
+    padding-top: 50px;
+    background-color: var(--gris-fonce);
+    color: white;
+    font-family: 'Roboto-Regular';  
+    height: 200px;
+    
+    
+        #titre_footer{
+            font-family: 'Shrikhand';
+            padding-left: 40px;
+            font-size: 24px;
+        }
+
+        .fas{
+            float: left;
+            margin-right: 20px;
+        }
+
+        ul{
+            list-style-type: none; 
+        }
+    
+        li{
+            margin-bottom: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+}
+
+>>>>>>> 2bb6db33a75793a15e0b92f6d1acc17ca9204d83
