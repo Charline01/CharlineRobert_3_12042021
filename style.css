@@ -28,16 +28,16 @@
   --gris-moyen2: #8f8e8e;
   --gris-fonce:#474747;
   --grisclair: #f6f6f6;
-  --couleurvalide: rgb(165, 243, 223);
+  --couleurvalide: rgb(150, 233, 208);
 }
 
 body {
   font-family: 'Roboto-Regular';
+  text-overflow: ellipsis;
 }
 
 body h1 {
   font-family: 'Shrikhand';
-  text-align: center;
 }
 
 body h2 {
@@ -55,6 +55,18 @@ body h4 {
 
 header {
   background-color: white;
+  text-align: center;
+}
+
+header .fa-arrow-left {
+  float: left;
+  font-size: 20px;
+  color: black;
+  padding: 15px;
+}
+
+header .fa-arrow-left:hover {
+  color: var(--gris-moyen2);
 }
 
 #localisation {
@@ -130,11 +142,13 @@ header {
   font-family: 'Roboto-Regular';
   font-size: 15px;
   width: 200px;
-  height: 50px;
   margin: auto;
   text-decoration: none;
   text-align: center;
-  padding-top: 50px;
+  border-radius: 30px;
+  -webkit-box-shadow: 3px 3px 10px var(--gris-moyen2);
+          box-shadow: 3px 3px 10px var(--gris-moyen2);
+  margin-top: 50px;
 }
 
 .btn_principal .linear-gradient {
@@ -147,6 +161,16 @@ header {
 .btn_principal a {
   text-decoration: none;
   color: white;
+}
+
+.btn_principal:hover {
+  -webkit-box-shadow: 3px 3px 10px var(--gris-fonce);
+          box-shadow: 3px 3px 10px var(--gris-fonce);
+}
+
+.btn_principal:hover .linear-gradient {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
 }
 
 .carte_restaurant {
@@ -212,6 +236,26 @@ header {
   color: black;
 }
 
+.btn_checked {
+  border-radius: 0px 30px 30px 0px;
+  background-color: var(--couleurvalide);
+  color: white;
+  height: 80px;
+  width: 80px;
+}
+
+.btn_checked .fa-check-circle {
+  font-size: 30px;
+  margin: 33%;
+}
+
+.fa-heart:hover {
+  display: none;
+  background-color: var(--couleur1);
+  -webkit-transform: background-color 1s ease-in;
+          transform: background-color 1s ease-in;
+}
+
 #menu {
   background-color: var(--grisclair);
   border-radius: 30px 30px 0px 0px;
@@ -242,9 +286,10 @@ header {
           box-shadow: 3px 3px 10px 3px var(--gris-moyen);
   background-color: white;
   border-radius: 20px 20px 20px 20px;
-  padding: 10px;
-  margin: 10px 10px 10px 10px;
+  padding: 5px;
   font-size: 14px;
+  width: auto;
+  margin: 20px 10px 20px 10px;
 }
 
 #menu .choix_assiette .prix {
