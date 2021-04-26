@@ -30,10 +30,104 @@
     --gris-moyen2: #8f8e8e;
     --gris-fonce:#474747;
     --grisclair: #f6f6f6;
-    --couleurvalide: rgb(150, 233, 208);
-    
-
+    --couleurvalide: #99E2D0;
 }
+
+.container{
+    text-align: center;
+    padding: 50px;
+}
+
+.loadspinner{
+    text-align: center;
+    align-content: center;
+    position: absolute;
+    overflow: hidden;
+    margin-left: auto;
+  margin-right: auto;
+left: 50%;
+  transform: translate(-50%, 40%);
+}
+
+$prog-bar-dur: 1000ms;
+$prog-bar-delay: 150ms;
+$cat-delay: $prog-bar-dur + $prog-bar-delay*2;
+
+#corps_du_site {
+    animation: cat 3000ms $cat-delay both cubic-bezier(.9,0,.1,1);
+}
+
+@keyframes cat{
+0% {
+    transform: translateX(-9999px);
+}
+100% {
+    transform: translateY(0);
+    }
+}
+
+
+.loader{
+margin: 100px auto;
+padding: 20px;
+font-size: 50px;
+}
+
+.fa-drumstick-bite{
+    color: var(--couleur1);
+    font-size:30px;
+}
+
+.fa-cheese{
+    color: var(--couleur2);
+    font-size:30px;
+}
+
+.fa-apple-alt{
+    color: var(--couleur3);
+    font-size:30px;
+}
+
+
+$loader-dot-size: 25px;
+$loader-dot-margin: 20px 20px 20px 0px;
+
+
+
+.loader-dot {
+	width: $loader-dot-size;
+	height: $loader-dot-size;
+	border-radius: 50%;
+	display: inline-block;
+	margin: $loader-dot-margin;
+	animation: 1s load-spinner infinite;
+	animation-timing-function: ease-in-out;
+
+
+	&--one {
+		animation-delay: 0.4s;
+	}
+
+	&--two {
+		animation-delay: 0.6s;
+	}
+
+	&--three {
+		animation-delay: 0.8s;
+	}
+}
+
+@keyframes load-spinner {
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+// fin animation 1//
+
+//fin coller
 
 
 body{
@@ -234,19 +328,7 @@ background-color:var(--grisclair) ;
 
 }
 
-.btn_checked{
-    border-radius: 0px 30px 30px 0px;
-    background-color: var(--couleurvalide);
-    color: white;
-    height: 80px;
-    width: 80px;
-    
 
-    .fa-check-circle{
-        font-size: 30px;
-        margin: 33%;
-    }
-}
 
 .fa-heart{
     
@@ -288,6 +370,15 @@ background-color:var(--grisclair) ;
             
         }
 
+        .btn_checked{
+            border-radius: 0px 20px 20px 0px;
+            background-color: var(--couleurvalide);
+            color: white;
+            height: 60px;
+            width: 90px;
+            transform: translate(2000px);
+            }
+
         .choix_assiette{
             box-shadow: 3px 3px 10px 3px var(--gris-moyen);
             background-color: white;
@@ -296,16 +387,55 @@ background-color:var(--grisclair) ;
             font-size: 14px;
             width: auto;
             margin: 20px 10px 20px 10px;
-    
-            
+            cursor: pointer;
+            height: auto;
+           
 
             .prix{
                 float: right;
+               
                 margin-top: -20px;
             }
+
+                &:hover .btn_checked{
+                    transform: translate(0px, 0px);
+                    transition: transform 330ms ease-in-out;
+
+                    & .fa-check-circle {
+                        transform: rotate(3turn);
+                transition: transform 500ms ease-in-out;
+                    }
+                
+            
+                }
         }
 }
 
+span {
+text-align: center;
+display: flex;
+float: right;
+margin: -10px;
+
+}
+
+
+   .fa-check-circle{
+        font-size: 20px;
+        text-align: center;
+        
+        margin-top: 25%;
+    }
+
+
+@keyframes cat {
+	0% {
+		transform: translateX(2000px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
 
 
 .la_palette_img_bg, .la_note_img_bg, .le_delice_img_bg, .la_francaise_img_bg{
@@ -375,6 +505,19 @@ footer{
     }
 }
 
+#menu{
+
+    .sous-titre-menu{
+        margin: auto;
+    }
+    
+    .choix_assiette{
+        width: 50%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+}
+
 /*----------------RESPONSIVE PC ----------------------*/
 
 @media all and (min-width: 1200px) and (max-width: 2600px)
@@ -392,7 +535,8 @@ footer{
         
         .choix_assiette{
             width: 50%;
-            margin: auto;
+            margin: 10px auto;
+            padding: 10px;
         }
     }
 
