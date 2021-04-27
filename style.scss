@@ -64,6 +64,9 @@ $cd-mint: #15dea5;
     position: relative;
     animation: menu 661ms both;
     z-index: -10;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
     
    // &__open-accent--1{
    //     @include menu__open-accent(450ms, 275ms);
@@ -79,6 +82,7 @@ $cd-mint: #15dea5;
         animation: menu__item 810ms cubic-bezier(.1,.9,.1,1) both;
         position: relative;
         border-radius: 20px;
+        overflow: hidden;
         
         
         &--1 {
@@ -128,9 +132,58 @@ $cd-mint: #15dea5;
     
 }
 
-
 // FIN TEST MENU DEROULANT //
 
+
+// coeur animation début
+
+$color-secondary:#fa79da;
+$color-primary:#9356dc;
+
+$color-heart:linear-gradient( $color-primary , $color-secondary);
+
+@keyframes backgroundtwo{
+    0%{
+      opacity:0;
+    }
+    50%{
+      opacity:0.5;
+    }
+    100%{
+      opacity:1;
+    }
+  }
+.heart{ 
+    position:absolute;
+    box-sizing: border-box;
+    width: 55px;
+    height:55px;
+    margin-left:50%;
+   & .fa-heart{
+        position:absolute;
+        background:white;
+        font-size:3rem;  
+        color: grey;
+        }
+  & .fa-gradient{
+    background-color:white; 
+    width:55px;
+    height:75px;
+  }
+  & .fa-gradient:hover{
+            cursor:pointer; 
+            font-weight:bold;
+            -moz-animation:backgroundtwo 3s  ;
+            -webkit-animation:backgroundtwo  3s  ;
+            animation: backgroundtwo 3s  ;
+            background:$color-heart;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+  }        
+      
+// fin  coeur animation //
 
 .loadspinner{
     text-align: center;
@@ -242,6 +295,9 @@ text-overflow: ellipsis;
 
     h4{
         margin: 5px 0px 0px 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 
@@ -388,6 +444,9 @@ background-color:var(--grisclair) ;
 
     .restaurant_description{
         padding-left: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     #la_palette, #la_note, #la_francaise, #le_delice{
@@ -423,7 +482,7 @@ background-color:var(--grisclair) ;
 
 
 
-.fa-heart{
+/*.fa-heart{
     
 
     &:hover{
@@ -433,7 +492,7 @@ background-color:var(--grisclair) ;
     }
 
 }
-
+*/
 
 #menu_entier{
     background-color: var(--grisclair);
@@ -441,9 +500,9 @@ background-color:var(--grisclair) ;
     padding: 10px 0px 100px 0px;
     margin-top: -50px;
     
-    .fa-heart {
-        float: right;
-        padding: 20px 20px 50px 50px;
+    //.fa-heart {
+    //    float: right;
+    //    padding: 20px 20px 50px 50px;
         
     }
     
@@ -470,6 +529,9 @@ background-color:var(--grisclair) ;
             height: 60px;
             width: 90px;
             transform: translate(2000px);
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
             
             }
 
@@ -483,13 +545,18 @@ background-color:var(--grisclair) ;
             margin: 20px 10px 20px 10px;
             cursor: pointer;
             height: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            overflow: hidden;
           
            
 
             .prix{
                 float: right;
-               
+                overflow: hidden;
                 margin-top: -20px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
 
                 &:active .btn_checked{
@@ -503,7 +570,7 @@ background-color:var(--grisclair) ;
                 
             
                 }
-        }
+        //}
 }
 
 span {
@@ -596,11 +663,13 @@ footer{
 {
     body{
         width: 90%;
-        margin: auto;
+        
     }
 }
 
 #menu_entier{
+    overflow: hidden;
+
 
     .sous-titre-menu{
         margin: auto;

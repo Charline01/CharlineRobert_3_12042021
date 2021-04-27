@@ -51,6 +51,9 @@
   -webkit-animation: menu 661ms both;
           animation: menu 661ms both;
   z-index: -10;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu__item {
@@ -61,6 +64,7 @@
           animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
   position: relative;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .menu__item--1 {
@@ -145,6 +149,64 @@
   99.9% {
     opacity: 20%;
   }
+}
+
+@-webkit-keyframes backgroundtwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundtwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heart {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  margin-left: 50%;
+}
+
+.heart .fa-heart {
+  position: absolute;
+  background: white;
+  font-size: 3rem;
+  color: grey;
+}
+
+.heart .fa-gradient {
+  background-color: white;
+  width: 55px;
+  height: 75px;
+}
+
+.heart .fa-gradient:hover {
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-animation: backgroundtwo  3s;
+  animation: backgroundtwo 3s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#fa79da));
+  background: linear-gradient(#9356dc, #fa79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .loadspinner {
@@ -273,6 +335,9 @@ body h3 {
 
 body h4 {
   margin: 5px 0px 0px 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 header {
@@ -427,6 +492,9 @@ header .fa-arrow-left:hover {
 
 .carte_restaurant .restaurant_description {
   padding-left: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .carte_restaurant #la_palette, .carte_restaurant #la_note, .carte_restaurant #la_francaise, .carte_restaurant #le_delice {
@@ -458,13 +526,17 @@ header .fa-arrow-left:hover {
   color: black;
 }
 
-.fa-heart:hover {
-  display: none;
-  background-color: var(--couleur1);
-  -webkit-transform: background-color 1s ease-in;
-          transform: background-color 1s ease-in;
-}
+/*.fa-heart{
+    
 
+    &:hover{
+        display: none;
+        background-color: var(--couleur1);
+        transform: background-color 1s ease-in;
+    }
+
+}
+*/
 #menu_entier {
   background-color: var(--grisclair);
   border-radius: 30px 30px 0px 0px;
@@ -472,25 +544,20 @@ header .fa-arrow-left:hover {
   margin-top: -50px;
 }
 
-#menu_entier .fa-heart {
-  float: right;
-  padding: 20px 20px 50px 50px;
-}
-
-#menu_entier #titre-menu {
+#titre-menu {
   font-family: 'Shrikhand';
   font-size: 25px;
   padding: 20px 0px 0px 20px;
 }
 
-#menu_entier .sous-titre-menu {
+.sous-titre-menu {
   font-size: 14px;
   border-bottom: 3px solid var(--couleurvalide);
   width: 30px;
   margin: 15px;
 }
 
-#menu_entier .btn_checked {
+.btn_checked {
   border-radius: 0px 20px 20px 0px;
   background-color: var(--couleurvalide);
   color: white;
@@ -498,9 +565,12 @@ header .fa-arrow-left:hover {
   width: 90px;
   -webkit-transform: translate(2000px);
           transform: translate(2000px);
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-#menu_entier .choix_assiette {
+.choix_assiette {
   -webkit-box-shadow: 3px 3px 10px 3px var(--gris-moyen);
           box-shadow: 3px 3px 10px 3px var(--gris-moyen);
   background-color: white;
@@ -511,14 +581,20 @@ header .fa-arrow-left:hover {
   margin: 20px 10px 20px 10px;
   cursor: pointer;
   height: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-#menu_entier .choix_assiette .prix {
+.choix_assiette .prix {
   float: right;
+  overflow: hidden;
   margin-top: -20px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-#menu_entier .choix_assiette:active .btn_checked {
+.choix_assiette:active .btn_checked {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   -webkit-transition: -webkit-transform 330ms ease-in-out;
@@ -527,7 +603,7 @@ header .fa-arrow-left:hover {
   transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
 }
 
-#menu_entier .choix_assiette:active .btn_checked .fa-check-circle {
+.choix_assiette:active .btn_checked .fa-check-circle {
   -webkit-transform: rotate(3turn);
           transform: rotate(3turn);
   -webkit-transition: -webkit-transform 500ms ease-in-out;
@@ -621,8 +697,11 @@ footer a {
 @media all and (min-width: 640px) and (max-width: 1200px) {
   body {
     width: 90%;
-    margin: auto;
   }
+}
+
+#menu_entier {
+  overflow: hidden;
 }
 
 #menu_entier .sous-titre-menu {
