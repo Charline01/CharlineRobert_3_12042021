@@ -33,10 +33,104 @@
     --couleurvalide: #99E2D0;
 }
 
-.container{
-    text-align: center;
-    padding: 50px;
+// TEST MENU DEROULANT //
+
+$cd-navy: #0E397F;
+$cd-mint: #15dea5;
+
+@mixin menu__open-accent($dur, $delay) {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--grisclair);
+    transform-origin: top left;
+    animation: menu $dur $delay both;
+    z-index: -1;
+    border-radius: 30px 30px 0px 0px;
+
 }
+
+.menu {
+    min-width: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    overflow: hidden;
+    transform-origin: top left;
+    position: relative;
+    animation: menu 661ms both;
+    z-index: -10;
+    
+   // &__open-accent--1{
+   //     @include menu__open-accent(450ms, 275ms);
+   //// }
+    //&__open-accent--2 {
+    //        @include menu__open-accent(450ms, 150ms);
+     //       z-index: -2;
+    //}
+    &__item {
+        padding: .75rem;
+        margin: .25rem;
+        background: #fff;
+        animation: menu__item 810ms cubic-bezier(.1,.9,.1,1) both;
+        position: relative;
+        border-radius: 20px;
+        
+        
+        &--1 {
+            animation-delay: 500ms;
+            > div {
+                animation-delay: 750ms;
+            }
+        }
+        &--2 {
+            animation-delay: 550ms;
+            > div {
+                animation-delay: 850ms;
+            }
+        }
+        &--3 {
+            animation-delay: 650ms;
+            > div {
+                animation-delay: 1000ms;
+            }
+        }
+    }
+}
+
+@keyframes menu {
+    0% {
+        transform: scaleY(-3);
+    }
+    33% {
+        transform: scaleY(-3);
+        animation-timing-function: cubic-bezier(.73,.01,.2,.99)
+    }
+
+}
+
+@keyframes menu__item {
+    0% {
+        transform: translateY(-550%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    99.9%{
+        opacity: 20%;
+    }
+    
+}
+
+
+// FIN TEST MENU DEROULANT //
+
 
 .loadspinner{
     text-align: center;
@@ -44,9 +138,9 @@
     position: absolute;
     overflow: hidden;
     margin-left: auto;
-  margin-right: auto;
-left: 50%;
-  transform: translate(-50%, 40%);
+    
+    left: 50%;
+    transform: translate(-50%, 40%);
 }
 
 $prog-bar-dur: 1000ms;
@@ -97,6 +191,7 @@ $loader-dot-margin: 20px 20px 20px 0px;
 .loader-dot {
 	width: $loader-dot-size;
 	height: $loader-dot-size;
+    border-radius: 50%;
 	border-radius: 50%;
 	display: inline-block;
 	margin: $loader-dot-margin;
@@ -125,9 +220,7 @@ $loader-dot-margin: 20px 20px 20px 0px;
 		opacity: 1;
 	}
 }
-// fin animation 1//
 
-//fin coller
 
 
 body{
@@ -342,7 +435,7 @@ background-color:var(--grisclair) ;
 }
 
 
-#menu{
+#menu_entier{
     background-color: var(--grisclair);
     border-radius: 30px 30px 0px 0px;
     padding: 10px 0px 100px 0px;
@@ -377,6 +470,7 @@ background-color:var(--grisclair) ;
             height: 60px;
             width: 90px;
             transform: translate(2000px);
+            
             }
 
         .choix_assiette{
@@ -389,6 +483,7 @@ background-color:var(--grisclair) ;
             margin: 20px 10px 20px 10px;
             cursor: pointer;
             height: auto;
+          
            
 
             .prix{
@@ -397,7 +492,7 @@ background-color:var(--grisclair) ;
                 margin-top: -20px;
             }
 
-                &:hover .btn_checked{
+                &:active .btn_checked{
                     transform: translate(0px, 0px);
                     transition: transform 330ms ease-in-out;
 
@@ -505,7 +600,7 @@ footer{
     }
 }
 
-#menu{
+#menu_entier{
 
     .sous-titre-menu{
         margin: auto;
@@ -527,7 +622,7 @@ footer{
         margin: auto;
     }
 
-    #menu{
+    #menu_entier{
 
         .sous-titre-menu{
             margin: auto;
