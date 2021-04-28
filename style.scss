@@ -137,51 +137,39 @@ $cd-mint: #15dea5;
 
 // coeur animation début
 
-$color-secondary:#fa79da;
-$color-primary:#9356dc;
+.coeur_like{
+    position: relative;
+    float: right;
+    
+}  
 
-$color-heart:linear-gradient( $color-primary , $color-secondary);
+.fa-heart{
+    position: absolute;
+    cursor: pointer;    
+    top: 0;
+    left:0;
+        &.coeur-vide {
+            border: black;
+            transform: opacity (100%);
+        }
+        &.coeur-plein{
+            color: var(--couleur2);
+            transform: opacity (0%);
+        }
 
-@keyframes backgroundtwo{
-    0%{
-      opacity:0;
-    }
-    50%{
-      opacity:0.5;
-    }
-    100%{
-      opacity:1;
-    }
-  }
-.heart{ 
-    position:absolute;
-    box-sizing: border-box;
-    width: 55px;
-    height:55px;
-    margin-left:50%;
-   & .fa-heart{
-        position:absolute;
-        background:white;
-        font-size:3rem;  
-        color: grey;
+    &:hover {
+        .coeur-vide {
+            transform: opacity (0%);
         }
-  & .fa-gradient{
-    background-color:white; 
-    width:55px;
-    height:75px;
-  }
-  & .fa-gradient:hover{
-            cursor:pointer; 
-            font-weight:bold;
-            -moz-animation:backgroundtwo 3s  ;
-            -webkit-animation:backgroundtwo  3s  ;
-            animation: backgroundtwo 3s  ;
-            background:$color-heart;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .coeur-plein {
+            transform: opacity (100%);
         }
-  }        
+    }
+}
+
+
+
+
       
 // fin  coeur animation //
 

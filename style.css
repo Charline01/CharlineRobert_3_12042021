@@ -151,62 +151,38 @@
   }
 }
 
-@-webkit-keyframes backgroundtwo {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
+.coeur_like {
+  position: relative;
+  float: right;
 }
 
-@keyframes backgroundtwo {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.heart {
+.fa-heart {
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 55px;
-  height: 55px;
-  margin-left: 50%;
-}
-
-.heart .fa-heart {
-  position: absolute;
-  background: white;
-  font-size: 3rem;
-  color: grey;
-}
-
-.heart .fa-gradient {
-  background-color: white;
-  width: 55px;
-  height: 75px;
-}
-
-.heart .fa-gradient:hover {
   cursor: pointer;
-  font-weight: bold;
-  -webkit-animation: backgroundtwo  3s;
-  animation: backgroundtwo 3s;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#fa79da));
-  background: linear-gradient(#9356dc, #fa79da);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  top: 0;
+  left: 0;
+}
+
+.fa-heart.coeur-vide {
+  border: black;
+  -webkit-transform: opacity 100%;
+          transform: opacity 100%;
+}
+
+.fa-heart.coeur-plein {
+  color: var(--couleur2);
+  -webkit-transform: opacity 0%;
+          transform: opacity 0%;
+}
+
+.fa-heart:hover .coeur-vide {
+  -webkit-transform: opacity 0%;
+          transform: opacity 0%;
+}
+
+.fa-heart:hover .coeur-plein {
+  -webkit-transform: opacity 100%;
+          transform: opacity 100%;
 }
 
 .loadspinner {
