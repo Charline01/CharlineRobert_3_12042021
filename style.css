@@ -65,6 +65,7 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  text-overflow: "ellipsis";
 }
 
 .menu__item--1 {
@@ -151,38 +152,62 @@
   }
 }
 
+@-webkit-keyframes backgroundtwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundtwo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .coeur_like {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  padding-right: 10%;
+  padding-top: 20px;
   float: right;
 }
 
-.fa-heart {
+.coeur_like .fa-heart {
   position: absolute;
+  font-size: 20px;
+  color: black;
+}
+
+.coeur_like .fa-gradient {
+  width: 55px;
+  height: 75px;
+}
+
+.coeur_like .fa-gradient:hover {
   cursor: pointer;
-  top: 0;
-  left: 0;
-}
-
-.fa-heart.coeur-vide {
-  border: black;
-  -webkit-transform: opacity 100%;
-          transform: opacity 100%;
-}
-
-.fa-heart.coeur-plein {
-  color: var(--couleur2);
-  -webkit-transform: opacity 0%;
-          transform: opacity 0%;
-}
-
-.fa-heart:hover .coeur-vide {
-  -webkit-transform: opacity 0%;
-          transform: opacity 0%;
-}
-
-.fa-heart:hover .coeur-plein {
-  -webkit-transform: opacity 100%;
-          transform: opacity 100%;
+  font-weight: bold;
+  -webkit-animation: backgroundtwo  3s;
+  animation: backgroundtwo 3s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#fa79da));
+  background: linear-gradient(#9356dc, #fa79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .loadspinner {
@@ -294,6 +319,7 @@
 body {
   font-family: 'Roboto-Regular';
   text-overflow: ellipsis;
+  margin: auto;
 }
 
 body h1 {
@@ -339,11 +365,12 @@ header .fa-arrow-left:hover {
   display: flex;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
+  text-align: center;
 }
 
 #localisation .fas {
   margin: 15px 30px 0px 0px;
-  margin-left: 25%;
+  margin-left: 33%;
   color: black;
 }
 
@@ -470,7 +497,7 @@ header .fa-arrow-left:hover {
   padding-left: 20px;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: "ellipsis";
 }
 
 .carte_restaurant #la_palette, .carte_restaurant #la_note, .carte_restaurant #la_francaise, .carte_restaurant #le_delice {
@@ -538,12 +565,12 @@ header .fa-arrow-left:hover {
   background-color: var(--couleurvalide);
   color: white;
   height: 60px;
-  width: 90px;
-  -webkit-transform: translate(2000px);
-          transform: translate(2000px);
+  width: 60px;
+  -webkit-transform: translate(100px);
+          transform: translate(100px);
   overflow: hidden;
   white-space: nowrap;
-  overflow: hidden;
+  display: inline-block;
 }
 
 .choix_assiette {
@@ -560,6 +587,7 @@ header .fa-arrow-left:hover {
   overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: "ellipsis";
 }
 
 .choix_assiette .prix {
@@ -568,24 +596,43 @@ header .fa-arrow-left:hover {
   margin-top: -20px;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-left: 85%;
+  white-space: nowrap;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
-.choix_assiette:active .btn_checked {
+.choix_assiette:hover .btn_checked {
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
-  -webkit-transition: -webkit-transform 330ms ease-in-out;
-  transition: -webkit-transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 
-.choix_assiette:active .btn_checked .fa-check-circle {
-  -webkit-transform: rotate(3turn);
-          transform: rotate(3turn);
+.choix_assiette:hover .btn_checked .fa-check-circle {
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
   -webkit-transition: -webkit-transform 500ms ease-in-out;
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.choix_assiette:hover .prix {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+}
+
+.choix_assiette span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 span {
@@ -599,8 +646,8 @@ span {
 
 .fa-check-circle {
   font-size: 20px;
-  text-align: center;
-  margin-top: 25%;
+  overflow: hidden;
+  margin-top: 33%;
 }
 
 @keyframes cat {
@@ -673,6 +720,7 @@ footer a {
 @media all and (min-width: 640px) and (max-width: 1200px) {
   body {
     width: 90%;
+    margin: auto;
   }
 }
 
@@ -681,11 +729,11 @@ footer a {
 }
 
 #menu_entier .sous-titre-menu {
-  margin: auto;
+  padding-top: 20px;
 }
 
 #menu_entier .choix_assiette {
-  width: 50%;
+  width: 90%;
   margin: 10px auto;
   padding: 10px;
 }

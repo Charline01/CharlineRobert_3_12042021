@@ -83,6 +83,7 @@ $cd-mint: #15dea5;
         position: relative;
         border-radius: 20px;
         overflow: hidden;
+        text-overflow: "ellipsis";
         
         
         &--1 {
@@ -137,38 +138,53 @@ $cd-mint: #15dea5;
 
 // coeur animation début
 
-.coeur_like{
-    position: relative;
-    float: right;
-    
-}  
+$color-secondary:#fa79da;
+$color-primary:#9356dc;
 
-.fa-heart{
-    position: absolute;
-    cursor: pointer;    
-    top: 0;
-    left:0;
-        &.coeur-vide {
-            border: black;
-            transform: opacity (100%);
-        }
-        &.coeur-plein{
-            color: var(--couleur2);
-            transform: opacity (0%);
-        }
+$color-heart:linear-gradient( $color-primary , $color-secondary);
 
-    &:hover {
-        .coeur-vide {
-            transform: opacity (0%);
-        }
-        .coeur-plein {
-            transform: opacity (100%);
-        }
+@keyframes backgroundtwo{
+    0%{
+      opacity:0;
     }
-}
-
-
-
+    50%{
+      opacity:0.5;
+    }
+    100%{
+      opacity:1;
+    }
+  }
+.coeur_like{ 
+    position: relative;
+    box-sizing: border-box;
+    width: 55px;
+    height:55px;
+    padding-right:10%;
+    padding-top: 20px; 
+    float: right;
+   
+   & .fa-heart{
+        position:absolute;
+        font-size:20px;  
+        color: black;
+        }
+  & .fa-gradient{
+    width:55px;
+    height:75px;
+  }
+  & .fa-gradient:hover{
+            cursor:pointer; 
+            font-weight:bold;
+            -moz-animation:backgroundtwo 3s  ;
+            -webkit-animation:backgroundtwo  3s  ;
+            animation: backgroundtwo 3s  ;
+            background:$color-heart;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+  }        
+      
 
       
 // fin  coeur animation //
@@ -267,6 +283,7 @@ $loader-dot-margin: 20px 20px 20px 0px;
 body{
 font-family:'Roboto-Regular';
 text-overflow: ellipsis;
+margin: auto;
 
     h1{
         font-family: 'Shrikhand';
@@ -310,11 +327,13 @@ header{
 #localisation{
     background-color:var(--gris-moyen);
     display: flex;
-    box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.1) inset;  
+    box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.1) inset;
+    text-align: center;
+     
 
         .fas{
             margin: 15px 30px 0px 0px;
-            margin-left: 25%;
+            margin-left:33%;
             color: black;
         }
 }
@@ -434,7 +453,8 @@ background-color:var(--grisclair) ;
         padding-left: 20px;
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis;
+        text-overflow: "ellipsis";
+        
     }
 
     #la_palette, #la_note, #la_francaise, #le_delice{
@@ -500,14 +520,11 @@ background-color:var(--grisclair) ;
         padding: 20px 0px 0px 20px;
     }
     
-
         .sous-titre-menu{
             font-size: 14px;
-            
             border-bottom: 3px solid var(--couleurvalide);
             width: 30px;
-            margin: 15px;
-            
+            margin: 15px; 
         }
 
         .btn_checked{
@@ -515,11 +532,12 @@ background-color:var(--grisclair) ;
             background-color: var(--couleurvalide);
             color: white;
             height: 60px;
-            width: 90px;
-            transform: translate(2000px);
+            width: 60px;
+            transform: translate(100px);
             overflow: hidden;
             white-space: nowrap;
-            overflow: hidden;
+            display: inline-block;
+           
             
             }
 
@@ -536,8 +554,7 @@ background-color:var(--grisclair) ;
             overflow: hidden;
             white-space: nowrap;
             overflow: hidden;
-          
-           
+            text-overflow: "ellipsis";
 
             .prix{
                 float: right;
@@ -545,18 +562,36 @@ background-color:var(--grisclair) ;
                 margin-top: -20px;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                padding-left: 85%;
+                white-space: nowrap;
+            
+            transform: translateX(0px);
+                
             }
 
-                &:active .btn_checked{
+                &:hover .btn_checked {
                     transform: translate(0px, 0px);
-                    transition: transform 330ms ease-in-out;
+                    transition: transform 100ms ease-in-out;
 
                     & .fa-check-circle {
-                        transform: rotate(3turn);
-                transition: transform 500ms ease-in-out;
+                        transform: rotate(1turn);
+                        transition: transform 500ms ease-in-out;
                     }
-                
+   
             
+                }
+
+                &:hover {
+                    .prix {
+                        transform: translateX(-60px);
+                        transition: transform 100ms ease-in-out;
+                    }
+                }
+
+                span {
+                    white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
                 }
         //}
 }
@@ -572,9 +607,8 @@ margin: -10px;
 
    .fa-check-circle{
         font-size: 20px;
-        text-align: center;
-        
-        margin-top: 25%;
+        overflow:hidden;
+        margin-top: 33%;       
     }
 
 
@@ -651,6 +685,7 @@ footer{
 {
     body{
         width: 90%;
+        margin: auto;
         
     }
 }
@@ -660,11 +695,12 @@ footer{
 
 
     .sous-titre-menu{
-        margin: auto;
+        padding-top: 20px;
+        
     }
     
     .choix_assiette{
-        width: 50%;
+        width: 90%;
         margin: 10px auto;
         padding: 10px;
     }

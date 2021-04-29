@@ -10,14 +10,16 @@
         <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
 
 	</head>
-
+    
+<body>
     <header>
         <h1>ohmyfood</h1>
 </header>
 
-    <!-- ******************************* LOAD SPINNER 
 
-    <div class="loadspinner">
+
+ <!-- ******************************* LOAD SPINNER     ************************* -->
+  <div class="loadspinner">
 
         <h4>Chargement...</h4>
     <div class="container-food">        
@@ -31,13 +33,9 @@
             <i class="fas fa-drumstick-bite"></i>
         </span>
     </div>
-</div>
+</div>  
+    <div id="corps_du_site">
 
-
-
-<body>
-<div id="corps_du_site">
-    ************************* -->
 
     
 
@@ -47,7 +45,7 @@
 
     <div id="localisation">
         <i class="fas fa-map-marker-alt"></i>
-        <label for="lieu"></label> <h3>Paris, Belleville</h3>
+        <label id="lieu"></label> <h3>Paris, Belleville</h3>
 
     </div>
 
@@ -94,14 +92,7 @@
                 <div class="chiffre">3</div>
                 <i class="fas fa-store"></i>
                         <h3>Dégustez au restaurant</h3>
-            </div>
-
-            <div class="coeur_like">
-                
-                <i class="fas fa-heart coeur-plein"></i>
-           <i class="far fa-heart coeur-vide"></i>
-         </div>
-         https://codepen.io/DJTOPHY/pen/qBamWxr?editors=1100
+            </div>       
 
         </section>
 
@@ -111,12 +102,7 @@
     <section id="restaurants_liste_acceuil">
         <h2>
             Restaurants
-        
-            
-     
-        </h2>
-
-       
+        </h2>       
 
             <div class="carte_restaurant">
                 <div class="logo_nouveau">
@@ -129,14 +115,18 @@
 
                      
                                 <div class="restaurant_description">
-                                    
-                                    
-                                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+                                    <div class="coeur_like">
+                                        <span class="fa-stack">
+                                              <i class="far  fa-heart fa-stack " aria-hidden="true"></i>
+                                          <i class="far  fa-heart fa-stack fa-gradient" aria-hidden="true"></i></span>
+                                      </div>
                          
                                     <h4>La palette du goût</h4>
                                     <p>Ménilmontant</p>
                                 </div>
                     </a>
+
+                    
             </div>
 
             <div class="carte_restaurant">
@@ -148,7 +138,11 @@
                             </div>
                             
                                 <div class="restaurant_description">
-                                    
+                                    <div class="coeur_like">
+                                        <span class="fa-stack">
+                                              <i class="far  fa-heart fa-stack " aria-hidden="true"></i>
+                                          <i class="far  fa-heart fa-stack fa-gradient" aria-hidden="true"></i></span>
+                                      </div>
                                     <h4>La note enchantée</h4>
                                     <p>Charonne</p>
                                 </div>
@@ -160,7 +154,11 @@
                             <div id="la_francaise">
                             </div>
                                 <div class="restaurant_description">
-                            
+                                    <div class="coeur_like">
+                                        <span class="fa-stack">
+                                              <i class="far  fa-heart fa-stack " aria-hidden="true"></i>
+                                          <i class="far  fa-heart fa-stack fa-gradient" aria-hidden="true"></i></span>
+                                      </div>
                                     <h4>A la française</h4>
                                     <p>Cité Rouge</p>
                                 </div>
@@ -173,7 +171,11 @@
                             </div>
                             
                                 <div class="restaurant_description">
-                                    
+                                    <div class="coeur_like">
+                                        <span class="fa-stack">
+                                              <i class="far  fa-heart fa-stack " aria-hidden="true"></i>
+                                          <i class="far  fa-heart fa-stack fa-gradient" aria-hidden="true"></i></span>
+                                      </div>
                                     <h4>Le délice des sens</h4>
                                     <p>Folie-Méricourt</p>
                                 </div>
@@ -191,18 +193,19 @@
     </div>
 
         <ul>
-            <div class="fas fa-utensils"></div> <li>
+            <li class="fas fa-utensils"></li>
+            <li>
                 <a href="#">Proposer un restaurant</a>
             </li>
 
-            <div class="fas fa-hands-helping"></div><li>
+            <li class="fas fa-hands-helping"></li><li>
                 <a href="#">Devenir partenaire</a>
             </li>
 
             <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:ohmyfood@contact.com">Contact</a></li>
         </ul>
-
-    </footer>
 </div>
+    </footer>
+
     </body>
