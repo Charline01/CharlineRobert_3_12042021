@@ -360,17 +360,18 @@ header .fa-arrow-left:hover {
 
 #localisation {
   background-color: var(--gris-moyen);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
           box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
-  text-align: center;
 }
 
 #localisation .fas {
   margin: 15px 30px 0px 0px;
-  margin-left: 33%;
   color: black;
 }
 
@@ -382,6 +383,11 @@ header .fa-arrow-left:hover {
   background-color: var(--grisclair);
 }
 
+#fonctionnement-liste {
+  width: auto;
+  margin: auto;
+}
+
 .choix_etape {
   background-color: var(--grisclair);
   display: -webkit-box;
@@ -391,10 +397,9 @@ header .fa-arrow-left:hover {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 10px var(--gris-moyen);
           box-shadow: 5px 5px 10px var(--gris-moyen);
-  text-align: center;
-  padding-top: 20px;
-  margin-left: 20px;
-  height: 60px;
+  padding-top: 10px;
+  margin-left: 15px;
+  height: 50px;
 }
 
 .choix_etape .fas {
@@ -717,31 +722,39 @@ footer a {
 }
 
 /*----------------RESPONSIVE tablette ----------------------*/
-@media all and (min-width: 640px) and (max-width: 1200px) {
+@media all and (min-width: 650px) and (max-width: 1300px) {
   body {
     width: 90%;
-    margin: auto;
+  }
+  #menu_entier {
+    overflow: hidden;
+  }
+  #menu_entier .sous-titre-menu {
+    padding-top: 20px;
+  }
+  #menu_entier .choix_assiette {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  #fonctionnement-liste {
+    width: 50%;
+  }
+  .choix_etape {
+    margin: 20px auto;
+    padding: 0px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-#menu_entier {
-  overflow: hidden;
-}
-
-#menu_entier .sous-titre-menu {
-  padding-top: 20px;
-}
-
-#menu_entier .choix_assiette {
-  width: 90%;
-  margin: 10px auto;
-  padding: 10px;
-}
-
 /*----------------RESPONSIVE PC ----------------------*/
-@media all and (min-width: 1200px) and (max-width: 2600px) {
+@media all and (min-width: 1300px) and (max-width: 2600px) {
   body {
-    width: 50%;
+    width: 60%;
     margin: auto;
   }
   #menu_entier .sous-titre-menu {
@@ -752,13 +765,73 @@ footer a {
     margin: 10px auto;
     padding: 10px;
   }
-  footer ul {
+  .carte_restaurant {
+    height: 350px;
+  }
+  .carte_restaurant .restaurant_description {
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;
+  }
+  .choix_etape {
+    margin: auto;
+    width: 100%;
+    padding: 0px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #fonctionnement-liste {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 90%;
   }
-  li {
-    padding-right: 10%;
+  #fonctionnement_site {
+    margin: 50px 0px 50px 0px;
+  }
+  .choix_etape {
+    padding-right: 30px;
+    margin-right: 50px;
+    width: 100%;
+  }
+  .liste_restaurant {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+  }
+  footer #titre_footer {
+    text-align: center;
+  }
+  footer .tous_les_liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  footer .tous_les_liens .lien_footer {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    margin-left: 15px;
+    width: 100%;
+  }
+  footer .tous_les_liens .fas {
+    margin-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
