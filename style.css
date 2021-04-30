@@ -182,8 +182,8 @@
           box-sizing: border-box;
   width: 55px;
   height: 55px;
-  padding-right: 10%;
-  padding-top: 20px;
+  padding-right: 20%;
+  padding-top: 30px;
   float: right;
 }
 
@@ -194,7 +194,6 @@
 }
 
 .coeur_like .fa-gradient {
-  width: 55px;
   height: 75px;
 }
 
@@ -385,7 +384,13 @@ header .fa-arrow-left:hover {
 
 #fonctionnement-liste {
   width: auto;
-  margin: auto;
+  margin: 10px;
+  padding: 20px;
+}
+
+#fonctionnement-site {
+  padding: 10px;
+  margin: 10px;
 }
 
 .choix_etape {
@@ -397,27 +402,37 @@ header .fa-arrow-left:hover {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 10px var(--gris-moyen);
           box-shadow: 5px 5px 10px var(--gris-moyen);
-  padding-top: 10px;
-  margin-left: 15px;
   height: 50px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 20px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .choix_etape .fas {
   color: var(--gris-moyen2);
   margin-right: 20px;
-  padding-top: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .choix_etape .chiffre {
   font-size: 12px;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   color: white;
   width: 15px;
   height: 15px;
   border-radius: 15px;
   background: var(--couleur1);
   margin-right: 20px;
-  margin-top: 15px;
   margin-left: -10px;
 }
 
@@ -724,7 +739,12 @@ footer a {
 /*----------------RESPONSIVE tablette ----------------------*/
 @media all and (min-width: 650px) and (max-width: 1300px) {
   body {
-    width: 90%;
+    width: 100%;
+    margin: auto;
+  }
+  #menu_complet {
+    width: 50%;
+    margin: auto;
   }
   #menu_entier {
     overflow: hidden;
@@ -738,7 +758,13 @@ footer a {
     padding: 10px;
   }
   #fonctionnement-liste {
-    width: 50%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    margin: auto;
   }
   .choix_etape {
     margin: 20px auto;
@@ -761,12 +787,35 @@ footer a {
     margin: auto;
   }
   #menu_entier .choix_assiette {
-    width: 50%;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 30px auto;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    width: auto;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 3s;
+            transition-duration: 3s;
+  }
+  #menu_entier .choix_assiette:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   .carte_restaurant {
     height: 350px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .carte_restaurant:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   .carte_restaurant .restaurant_description {
     width: 50%;
@@ -777,6 +826,16 @@ footer a {
     margin: auto;
     width: 100%;
     padding: 0px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 30px;
+    margin-right: 50px;
+    align-items: center;
+  }
+  .choix_etape .fas {
     -ms-flex-line-pack: center;
         align-content: center;
     -webkit-box-align: center;
@@ -795,11 +854,6 @@ footer a {
   #fonctionnement_site {
     margin: 50px 0px 50px 0px;
   }
-  .choix_etape {
-    padding-right: 30px;
-    margin-right: 50px;
-    width: 100%;
-  }
   .liste_restaurant {
     display: -ms-grid;
     display: grid;
@@ -808,6 +862,19 @@ footer a {
     -webkit-column-gap: 30px;
             column-gap: 30px;
     row-gap: 30px;
+  }
+  #menu_complet {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    margin: auto;
+    margin-top: 50px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 90% auto;
   }
   footer #titre_footer {
     text-align: center;

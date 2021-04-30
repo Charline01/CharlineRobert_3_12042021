@@ -38,6 +38,7 @@
 $cd-navy: #0E397F;
 $cd-mint: #15dea5;
 
+
 @mixin menu__open-accent($dur, $delay) {
     content: "";
     position: absolute;
@@ -159,8 +160,8 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
     box-sizing: border-box;
     width: 55px;
     height:55px;
-    padding-right:10%;
-    padding-top: 20px; 
+    padding-right:20%;
+    padding-top: 30px; 
     float: right;
    
    & .fa-heart{
@@ -169,7 +170,6 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
         color: black;
         }
   & .fa-gradient{
-    width:55px;
     height:75px;
   }
   & .fa-gradient:hover{
@@ -347,8 +347,13 @@ background-color:var(--grisclair) ;
 
 #fonctionnement-liste{
     width: auto;
-    margin: auto;
-   
+    margin: 10px;
+    padding: 20px;
+}
+
+#fonctionnement-site{
+    padding: 10px;
+    margin: 10px;
 }
 
 .choix_etape{
@@ -357,31 +362,29 @@ background-color:var(--grisclair) ;
     margin-bottom: 25px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px var(--gris-moyen);
-    padding-top: 10px;
-
-    margin-left: 15px;
     height: 50px;
-
-    
- 
+    align-content: center;
+    margin: 20px auto;
+    align-items:center;
     
     .fas{
         color: var(--gris-moyen2);
         margin-right: 20px;
-        padding-top: 15px;
+        align-items:center;
     }
 
     .chiffre
     {
         font-size: 12px;
         text-align: center;
+        align-items:center;
+        align-content: center;
         color: white;
         width: 15px;
         height: 15px;
         border-radius: 15px;
         background:var(--couleur1); 
         margin-right: 20px;
-        margin-top: 15px;
         margin-left: -10px;
     }
 
@@ -691,7 +694,13 @@ footer{
 
 @media all and (min-width: 650px) and (max-width: 1300px) {
     body{
-        width: 90%;
+        width: 100%;
+        margin: auto;
+    }
+
+    #menu_complet{
+        width: 50%;
+        margin: auto;
     }
 
         #menu_entier{
@@ -700,7 +709,6 @@ footer{
 
             .sous-titre-menu{
                 padding-top: 20px;
-                
             }
             
             .choix_assiette{
@@ -711,11 +719,12 @@ footer{
         }
 
         #fonctionnement-liste{
-            
-            width: 50%;
-            
-           
+            align-content: center;
+            align-items:center;
+            width: 40%;
+            margin: auto;
             }
+
 
 
         .choix_etape{
@@ -742,80 +751,105 @@ footer{
         }
         
         .choix_assiette{
-            width: 50%;
-            margin: 10px auto;
-            padding: 10px;
+            margin: 30px auto;
+            transform: scale(1);
+            width: auto;
+            transition-property: transform;
+            transition-duration: 3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
         }
     }
 
     .carte_restaurant{
-height: 350px;
+        height: 350px;
+        transform: scale(1);
+        transition-property: transform;
+        transition-duration: 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
   
         .restaurant_description{
             width: 50%;
             margin: auto;
             padding-top: 20px;
         }
- }
-
- .choix_etape{
-    margin: auto;
-    width: 100%;
-    padding:0px;
-    align-content: center;
-    align-items:center;
-
-}
-
-
-    #fonctionnement-liste{
-    display: flex;
-    justify-content: center;
-    width: 90%;
     }
 
-    #fonctionnement_site{
-        margin: 50px 0px 50px 0px;
-    }
+        .choix_etape{
+            margin: auto;
+            width: 100%;
+            padding:0px;
+            align-content: center;
+            align-items:center;
+            padding-right: 30px;
+            margin-right: 50px;
+            align-items:center;
+            
+            .fas {
+               
+                align-content: center;
+            align-items:center;
+                }
+        }
 
-    .choix_etape{
-    padding-right: 30px;
-    margin-right: 50px;
-    width: 100%;
-    }
+        #fonctionnement-liste{
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        }
 
+        #fonctionnement_site{
+            margin: 50px 0px 50px 0px;
+        }
 
-    .liste_restaurant{
+        .liste_restaurant{
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         column-gap: 30px;
         row-gap: 30px;
-    }
+        }
 
+        #menu_complet{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        margin: auto;
+        margin-top: 50px;
+        align-content: center;
+        width: 90% auto;
 
+        }
     
-    footer {
-        
-        #titre_footer{
-            text-align: center;
-        }    
 
-        .tous_les_liens{
-            display: flex;
-            margin:auto;
-            align-content: center;
+       
+footer {
+    #titre_footer{
+    text-align: center;
+    }    
+     .tous_les_liens{
+        display: flex;
+        margin:auto;
+        align-content: center;
 
-                .lien_footer{
-                    align-content: center;
-                    align-items: center;
-                    margin: auto;
-                    margin-left: 15px;
-                    width: 100%;
+            .lien_footer{
+                 align-content: center;
+                 align-items: center;
+                 margin: auto;
+                 margin-left: 15px;
+                width: 100%;
                 }
 
               .fas {
                 margin-right: 10px;
               }  
         }
-}
+
+    }
+
 }
