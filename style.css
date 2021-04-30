@@ -19,18 +19,6 @@
   src: url("typo/Roboto-Bold.ttf") format("truetype");
 }
 
-:root {
-  --couleur1:#9356DC;
-  --couleur1clair:#f7ddfa;
-  --couleur2:#FF79DA;
-  --couleur3:#99E2D0;
-  --gris-moyen: #eaeaea;
-  --gris-moyen2: #8f8e8e;
-  --gris-fonce:#474747;
-  --grisclair: #f6f6f6;
-  --couleurvalide: #99E2D0;
-}
-
 .menu {
   min-width: 33vh;
   display: -webkit-box;
@@ -51,21 +39,14 @@
   -webkit-animation: menu 661ms both;
           animation: menu 661ms both;
   z-index: -10;
-  overflow: hidden;
   white-space: nowrap;
-  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__item {
-  padding: .75rem;
-  margin: .25rem;
   background: #fff;
   -webkit-animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
           animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  text-overflow: "ellipsis";
 }
 
 .menu__item--1 {
@@ -182,7 +163,7 @@
           box-sizing: border-box;
   width: 55px;
   height: 55px;
-  padding-right: 20%;
+  padding-right: 50px;
   padding-top: 30px;
   float: right;
 }
@@ -200,8 +181,8 @@
 .coeur_like .fa-gradient:hover {
   cursor: pointer;
   font-weight: bold;
-  -webkit-animation: backgroundtwo  3s;
-  animation: backgroundtwo 3s;
+  -webkit-animation: backgroundtwo  5s;
+  animation: backgroundtwo 5s;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#fa79da));
   background: linear-gradient(#9356dc, #fa79da);
   -webkit-background-clip: text;
@@ -224,6 +205,7 @@
 #corps_du_site {
   -webkit-animation: cat 3000ms 1300ms both cubic-bezier(0.9, 0, 0.1, 1);
           animation: cat 3000ms 1300ms both cubic-bezier(0.9, 0, 0.1, 1);
+  overflow: hidden;
 }
 
 @-webkit-keyframes cat {
@@ -255,17 +237,17 @@
 }
 
 .fa-drumstick-bite {
-  color: var(--couleur1);
+  color: #9356DC;
   font-size: 30px;
 }
 
 .fa-cheese {
-  color: var(--couleur2);
+  color: #FF79DA;
   font-size: 30px;
 }
 
 .fa-apple-alt {
-  color: var(--couleur3);
+  color: #99E2D0;
   font-size: 30px;
 }
 
@@ -317,7 +299,6 @@
 
 body {
   font-family: 'Roboto-Regular';
-  text-overflow: ellipsis;
   margin: auto;
 }
 
@@ -354,11 +335,11 @@ header .fa-arrow-left {
 }
 
 header .fa-arrow-left:hover {
-  color: var(--gris-moyen2);
+  color: #8f8e8e;
 }
 
 #localisation {
-  background-color: var(--gris-moyen);
+  background-color: #eaeaea;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -379,7 +360,7 @@ header .fa-arrow-left:hover {
 }
 
 #presentation_site, .choix_etape, #restaurants_liste_acceuil {
-  background-color: var(--grisclair);
+  background-color: #f6f6f6;
 }
 
 #fonctionnement-liste {
@@ -388,20 +369,24 @@ header .fa-arrow-left:hover {
   padding: 20px;
 }
 
-#fonctionnement-site {
+.titre_fonctionnement {
   padding: 10px;
   margin: 10px;
 }
 
+.titre_fonctionnement h2 {
+  padding-left: 10px;
+}
+
 .choix_etape {
-  background-color: var(--grisclair);
+  background-color: #f6f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 25px;
   border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 10px var(--gris-moyen);
-          box-shadow: 5px 5px 10px var(--gris-moyen);
+  -webkit-box-shadow: 5px 5px 10px #eaeaea;
+          box-shadow: 5px 5px 10px #eaeaea;
   height: 50px;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -412,7 +397,7 @@ header .fa-arrow-left:hover {
 }
 
 .choix_etape .fas {
-  color: var(--gris-moyen2);
+  color: #8f8e8e;
   margin-right: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -431,13 +416,13 @@ header .fa-arrow-left:hover {
   width: 15px;
   height: 15px;
   border-radius: 15px;
-  background: var(--couleur1);
+  background: #9356DC;
   margin-right: 20px;
   margin-left: -10px;
 }
 
 .choix_etape:hover {
-  background-color: var(--couleur1clair);
+  background-color: #f7ddfa;
 }
 
 .choix_etape:hover .fas {
@@ -456,14 +441,14 @@ header .fa-arrow-left:hover {
   text-decoration: none;
   text-align: center;
   border-radius: 30px;
-  -webkit-box-shadow: 3px 3px 10px var(--gris-moyen2);
-          box-shadow: 3px 3px 10px var(--gris-moyen2);
+  -webkit-box-shadow: 3px 3px 10px #8f8e8e;
+          box-shadow: 3px 3px 10px #8f8e8e;
   margin-top: 50px;
 }
 
 .btn_principal .linear-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--couleur2)), to(var(--couleur1)));
-  background: linear-gradient(var(--couleur2), var(--couleur1));
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   padding: 15px;
 }
@@ -474,8 +459,8 @@ header .fa-arrow-left:hover {
 }
 
 .btn_principal:hover {
-  -webkit-box-shadow: 3px 3px 10px var(--gris-fonce);
-          box-shadow: 3px 3px 10px var(--gris-fonce);
+  -webkit-box-shadow: 3px 3px 10px #474747;
+          box-shadow: 3px 3px 10px #474747;
 }
 
 .btn_principal:hover .linear-gradient {
@@ -483,13 +468,25 @@ header .fa-arrow-left:hover {
           filter: brightness(110%);
 }
 
+.restaurant_description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .carte_restaurant {
   background-color: white;
   height: 250px;
   margin-bottom: 15px;
   border-radius: 30px;
-  -webkit-box-shadow: 3px 3px 10px 3px var(--gris-moyen);
-          box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+  -webkit-box-shadow: 3px 3px 10px 3px #eaeaea;
+          box-shadow: 3px 3px 10px 3px #eaeaea;
 }
 
 .carte_restaurant p, .carte_restaurant h4 {
@@ -505,19 +502,12 @@ header .fa-arrow-left:hover {
 }
 
 .carte_restaurant .logo_nouveau {
-  background-color: var(--couleurvalide);
+  background-color: #99E2D0;
   padding: 8px;
   font-size: 12px;
   font-family: 'Roboto-Bold';
   color: #159e70;
   margin: 20px;
-}
-
-.carte_restaurant .restaurant_description {
-  padding-left: 20px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: "ellipsis";
 }
 
 .carte_restaurant #la_palette, .carte_restaurant #la_note, .carte_restaurant #la_francaise, .carte_restaurant #le_delice {
@@ -549,19 +539,8 @@ header .fa-arrow-left:hover {
   color: black;
 }
 
-/*.fa-heart{
-    
-
-    &:hover{
-        display: none;
-        background-color: var(--couleur1);
-        transform: background-color 1s ease-in;
-    }
-
-}
-*/
 #menu_entier {
-  background-color: var(--grisclair);
+  background-color: #f6f6f6;
   border-radius: 30px 30px 0px 0px;
   padding: 10px 0px 100px 0px;
   margin-top: -50px;
@@ -575,14 +554,14 @@ header .fa-arrow-left:hover {
 
 .sous-titre-menu {
   font-size: 14px;
-  border-bottom: 3px solid var(--couleurvalide);
+  border-bottom: 3px solid #99E2D0;
   width: 30px;
   margin: 15px;
 }
 
 .btn_checked {
   border-radius: 0px 20px 20px 0px;
-  background-color: var(--couleurvalide);
+  background-color: #99E2D0;
   color: white;
   height: 60px;
   width: 60px;
@@ -594,8 +573,8 @@ header .fa-arrow-left:hover {
 }
 
 .choix_assiette {
-  -webkit-box-shadow: 3px 3px 10px 3px var(--gris-moyen);
-          box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+  -webkit-box-shadow: 3px 3px 10px 3px #eaeaea;
+          box-shadow: 3px 3px 10px 3px #eaeaea;
   background-color: white;
   border-radius: 20px 20px 20px 20px;
   padding: 5px;
@@ -604,10 +583,9 @@ header .fa-arrow-left:hover {
   margin: 20px 10px 20px 10px;
   cursor: pointer;
   height: auto;
-  overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: "ellipsis";
+  text-overflow: ellipsis;
 }
 
 .choix_assiette .prix {
@@ -616,10 +594,14 @@ header .fa-arrow-left:hover {
   margin-top: -20px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding-left: 85%;
   white-space: nowrap;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .choix_assiette:hover .btn_checked {
@@ -641,8 +623,8 @@ header .fa-arrow-left:hover {
 }
 
 .choix_assiette:hover .prix {
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   -webkit-transition: -webkit-transform 100ms ease-in-out;
   transition: -webkit-transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out;
@@ -706,7 +688,7 @@ span {
 
 footer {
   padding-top: 50px;
-  background-color: var(--gris-fonce);
+  background-color: #474747;
   color: white;
   font-family: 'Roboto-Regular';
   height: 200px;
@@ -745,6 +727,7 @@ footer a {
   #menu_complet {
     width: 50%;
     margin: auto;
+    padding-top: 20px;
   }
   #menu_entier {
     overflow: hidden;
@@ -778,9 +761,9 @@ footer a {
 }
 
 /*----------------RESPONSIVE PC ----------------------*/
-@media all and (min-width: 1300px) and (max-width: 2600px) {
+@media all and (min-width: 1300px) and (max-width: 4000px) {
   body {
-    width: 60%;
+    width: 90%;
     margin: auto;
   }
   #menu_entier .sous-titre-menu {
@@ -797,6 +780,7 @@ footer a {
     transition-property: transform, -webkit-transform;
     -webkit-transition-duration: 3s;
             transition-duration: 3s;
+    width: auto;
   }
   #menu_entier .choix_assiette:hover {
     -webkit-transform: scale(1.05);
@@ -874,7 +858,10 @@ footer a {
     margin-top: 50px;
     -ms-flex-line-pack: center;
         align-content: center;
-    width: 90% auto;
+    width: 90%;
+    padding-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   footer #titre_footer {
     text-align: center;

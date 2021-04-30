@@ -20,23 +20,11 @@
 	src: url('typo/Roboto-Bold.ttf') format('truetype');
 }
 
-:root
-{
-    --couleur1:#9356DC;
-    --couleur1clair:#f7ddfa;
-    --couleur2:#FF79DA;
-    --couleur3:#99E2D0;
-    --gris-moyen: #eaeaea;
-    --gris-moyen2: #8f8e8e;
-    --gris-fonce:#474747;
-    --grisclair: #f6f6f6;
-    --couleurvalide: #99E2D0;
-}
+@import "./variables";
 
 // TEST MENU DEROULANT //
 
-$cd-navy: #0E397F;
-$cd-mint: #15dea5;
+
 
 
 @mixin menu__open-accent($dur, $delay) {
@@ -46,7 +34,7 @@ $cd-mint: #15dea5;
     right: 0;
     top: 0;
     bottom: 0;
-    background: var(--grisclair);
+    background: $grisclair;
     transform-origin: top left;
     animation: menu $dur $delay both;
     z-index: -1;
@@ -65,9 +53,9 @@ $cd-mint: #15dea5;
     position: relative;
     animation: menu 661ms both;
     z-index: -10;
-            overflow: hidden;
-            white-space: nowrap;
-            overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+            
     
    // &__open-accent--1{
    //     @include menu__open-accent(450ms, 275ms);
@@ -77,14 +65,9 @@ $cd-mint: #15dea5;
      //       z-index: -2;
     //}
     &__item {
-        padding: .75rem;
-        margin: .25rem;
+
         background: #fff;
         animation: menu__item 810ms cubic-bezier(.1,.9,.1,1) both;
-        position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        text-overflow: "ellipsis";
         
         
         &--1 {
@@ -131,10 +114,9 @@ $cd-mint: #15dea5;
     99.9%{
         opacity: 20%;
     }
-    
 }
-
 // FIN TEST MENU DEROULANT //
+
 
 
 // coeur animation début
@@ -160,7 +142,7 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
     box-sizing: border-box;
     width: 55px;
     height:55px;
-    padding-right:20%;
+    padding-right:50px;
     padding-top: 30px; 
     float: right;
    
@@ -175,9 +157,9 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
   & .fa-gradient:hover{
             cursor:pointer; 
             font-weight:bold;
-            -moz-animation:backgroundtwo 3s  ;
-            -webkit-animation:backgroundtwo  3s  ;
-            animation: backgroundtwo 3s  ;
+            -moz-animation:backgroundtwo 5s  ;
+            -webkit-animation:backgroundtwo  5s  ;
+            animation: backgroundtwo 5s  ;
             background:$color-heart;
             -webkit-background-clip: text;
             background-clip: text;
@@ -206,6 +188,7 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
 
 #corps_du_site {
     animation: cat 3000ms $cat-delay both cubic-bezier(.9,0,.1,1);
+    overflow: hidden;
 }
 
 @keyframes cat{
@@ -225,17 +208,17 @@ font-size: 50px;
 }
 
 .fa-drumstick-bite{
-    color: var(--couleur1);
+    color: $couleur1;
     font-size:30px;
 }
 
 .fa-cheese{
-    color: var(--couleur2);
+    color: $couleur2;
     font-size:30px;
 }
 
 .fa-apple-alt{
-    color: var(--couleur3);
+    color: $couleur3;
     font-size:30px;
 }
 
@@ -282,8 +265,9 @@ $loader-dot-margin: 20px 20px 20px 0px;
 
 body{
 font-family:'Roboto-Regular';
-text-overflow: ellipsis;
+
 margin: auto;
+//overflow: hidden;
 
     h1{
         font-family: 'Shrikhand';
@@ -318,14 +302,14 @@ header{
 
         
         &:hover{
-            color: var(--gris-moyen2);
+            color: $gris-moyen2;
         }
     }
    
 }
 
 #localisation{
-    background-color:var(--gris-moyen);
+    background-color: $gris-moyen;
     justify-content: center;
     display: flex;
     box-shadow: 0px 5px 5px 0px  rgba(0, 0, 0, 0.1) inset;
@@ -342,7 +326,7 @@ header{
 }
 
 #presentation_site, .choix_etape, #restaurants_liste_acceuil{
-background-color:var(--grisclair) ;
+background-color: $grisclair ;
 }
 
 #fonctionnement-liste{
@@ -351,24 +335,28 @@ background-color:var(--grisclair) ;
     padding: 20px;
 }
 
-#fonctionnement-site{
+.titre_fonctionnement{
     padding: 10px;
     margin: 10px;
+
+    h2{
+        padding-left: 10px;
+    }
 }
 
 .choix_etape{
-    background-color:var(--grisclair) ;
+    background-color: $grisclair ;
     display: flex;
     margin-bottom: 25px;
     border-radius: 20px;
-    box-shadow: 5px 5px 10px var(--gris-moyen);
+    box-shadow: 5px 5px 10px $gris-moyen;
     height: 50px;
     align-content: center;
     margin: 20px auto;
     align-items:center;
     
     .fas{
-        color: var(--gris-moyen2);
+        color: $gris-moyen2;
         margin-right: 20px;
         align-items:center;
     }
@@ -383,13 +371,13 @@ background-color:var(--grisclair) ;
         width: 15px;
         height: 15px;
         border-radius: 15px;
-        background:var(--couleur1); 
+        background:$couleur1; 
         margin-right: 20px;
         margin-left: -10px;
     }
 
     &:hover{
-        background-color: var(--couleur1clair);
+        background-color: $couleur1clair;
         
             .fas{
                color: #9356DC; 
@@ -410,11 +398,11 @@ background-color:var(--grisclair) ;
     text-decoration: none;
     text-align: center;
     border-radius: 30px;
-    box-shadow: 3px 3px 10px var(--gris-moyen2);
+    box-shadow: 3px 3px 10px $gris-moyen2;
     margin-top: 50px;
 
     .linear-gradient {
-        background: linear-gradient( var(--couleur2), var(--couleur1));
+        background: linear-gradient( $couleur2, $couleur1);
         border-radius: 30px;
         padding: 15px;
       }
@@ -425,7 +413,7 @@ background-color:var(--grisclair) ;
     }
 
     &:hover{
-        box-shadow: 3px 3px 10px var(--gris-fonce);
+        box-shadow: 3px 3px 10px $gris-fonce;
         
         .linear-gradient{
            filter: brightness(110%); 
@@ -434,12 +422,24 @@ background-color:var(--grisclair) ;
     }
 }
 
+
+.restaurant_description{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    
+}
+
+
 .carte_restaurant{
     background-color: white;
     height: 250px;
     margin-bottom: 15px;
     border-radius: 30px;
-    box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+    box-shadow: 3px 3px 10px 3px $gris-moyen;
     
     p, h4{
         margin: 10px;
@@ -452,20 +452,12 @@ background-color:var(--grisclair) ;
     }
 
     .logo_nouveau{
-        background-color: var(--couleurvalide);
+        background-color: $couleurvalide;
         padding: 8px;
         font-size: 12px;
         font-family: 'Roboto-Bold';
         color: rgb(21, 158, 112);
         margin: 20px;
-    }
-
-    .restaurant_description{
-        padding-left: 20px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: "ellipsis";
-        
     }
 
     #la_palette, #la_note, #la_francaise, #le_delice{
@@ -500,21 +492,8 @@ background-color:var(--grisclair) ;
 }
 
 
-
-/*.fa-heart{
-    
-
-    &:hover{
-        display: none;
-        background-color: var(--couleur1);
-        transform: background-color 1s ease-in;
-    }
-
-}
-*/
-
 #menu_entier{
-    background-color: var(--grisclair);
+    background-color: $grisclair;
     border-radius: 30px 30px 0px 0px;
     padding: 10px 0px 100px 0px;
     margin-top: -50px;
@@ -533,14 +512,14 @@ background-color:var(--grisclair) ;
     
         .sous-titre-menu{
             font-size: 14px;
-            border-bottom: 3px solid var(--couleurvalide);
+            border-bottom: 3px solid $couleurvalide;
             width: 30px;
             margin: 15px; 
         }
 
         .btn_checked{
             border-radius: 0px 20px 20px 0px;
-            background-color: var(--couleurvalide);
+            background-color: $couleurvalide;
             color: white;
             height: 60px;
             width: 60px;
@@ -553,7 +532,7 @@ background-color:var(--grisclair) ;
             }
 
         .choix_assiette{
-            box-shadow: 3px 3px 10px 3px var(--gris-moyen);
+            box-shadow: 3px 3px 10px 3px $gris-moyen;
             background-color: white;
             border-radius: 20px 20px 20px 20px;
             padding: 5px;
@@ -562,10 +541,10 @@ background-color:var(--grisclair) ;
             margin: 20px 10px 20px 10px;
             cursor: pointer;
             height: auto;
-            overflow: hidden;
+
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: "ellipsis";
+            text-overflow: ellipsis;
 
             .prix{
                 float: right;
@@ -573,10 +552,10 @@ background-color:var(--grisclair) ;
                 margin-top: -20px;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                padding-left: 85%;
                 white-space: nowrap;
-            
-            transform: translateX(0px);
+                transform: translateX(0px);
+                align-items: center;
+                align-content: center;
                 
             }
 
@@ -594,7 +573,7 @@ background-color:var(--grisclair) ;
 
                 &:hover {
                     .prix {
-                        transform: translateX(-60px);
+                        transform: translateX(-20px);
                         transition: transform 100ms ease-in-out;
                     }
                 }
@@ -659,7 +638,7 @@ margin: -10px;
 footer{
     
     padding-top: 50px;
-    background-color: var(--gris-fonce);
+    background-color: $gris-fonce;
     color: white;
     font-family: 'Roboto-Regular';  
     height: 200px;
@@ -701,6 +680,7 @@ footer{
     #menu_complet{
         width: 50%;
         margin: auto;
+        padding-top: 20px;
     }
 
         #menu_entier{
@@ -738,9 +718,9 @@ footer{
 
 /*----------------RESPONSIVE PC ----------------------*/
 
-@media all and (min-width: 1300px) and (max-width: 2600px) {
+@media all and (min-width: 1300px) and (max-width: 4000px) {
     body{
-        width: 60%;
+        width: 90%;
         margin: auto;
     }
 
@@ -756,6 +736,7 @@ footer{
             width: auto;
             transition-property: transform;
             transition-duration: 3s;
+            width: auto;
 
             &:hover {
                 transform: scale(1.05);
@@ -780,6 +761,7 @@ footer{
             padding-top: 20px;
         }
     }
+
 
         .choix_etape{
             margin: auto;
@@ -822,7 +804,10 @@ footer{
         margin: auto;
         margin-top: 50px;
         align-content: center;
-        width: 90% auto;
+        width: 90%;
+        padding-top: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
 
         }
     
