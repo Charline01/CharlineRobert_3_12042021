@@ -210,30 +210,33 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
     min-height: 500vh;
     margin: auto;
     margin-top: -50px;
-    display: grid;
-	grid-template-rows: auto 1fr auto;
+   
 
     animation: disparition 4s cubic-bezier(.1,.9,.1,1) forwards;
     transform: opacity (1);
-    overflow: hidden;
+    
     animation-iteration-count: 1;
-    z-index: 5;
+    z-index: 1;
+    overflow: hidden;
 
 }
 
 @keyframes disparition {
     0% {
-        
+        z-index: 1;
         opacity: 100%;
     }
     
 
     80%{
         opacity: 100%;
+        z-index: 1;
     }
 
     100%{
         opacity: 0%;
+        z-index: -10;
+        
     }
 }
 

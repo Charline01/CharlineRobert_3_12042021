@@ -225,41 +225,43 @@
   min-height: 500vh;
   margin: auto;
   margin-top: -50px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
   -webkit-animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
           animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
   -webkit-transform: opacity 1;
           transform: opacity 1;
-  overflow: hidden;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  z-index: 5;
+  z-index: 1;
+  overflow: hidden;
 }
 
 @-webkit-keyframes disparition {
   0% {
+    z-index: 1;
     opacity: 100%;
   }
   80% {
     opacity: 100%;
+    z-index: 1;
   }
   100% {
     opacity: 0%;
+    z-index: -10;
   }
 }
 
 @keyframes disparition {
   0% {
+    z-index: 1;
     opacity: 100%;
   }
   80% {
     opacity: 100%;
+    z-index: 1;
   }
   100% {
     opacity: 0%;
+    z-index: -10;
   }
 }
 
