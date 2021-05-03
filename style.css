@@ -202,31 +202,64 @@
           transform: translate(-50%, 40%);
 }
 
+/*
 #corps_du_site {
-  -webkit-animation: cat 3000ms 1300ms both cubic-bezier(0.9, 0, 0.1, 1);
-          animation: cat 3000ms 1300ms both cubic-bezier(0.9, 0, 0.1, 1);
+    animation: cat 3000ms $cat-delay both cubic-bezier(.9,0,.1,1);
+    overflow: hidden;
+}
+
+@keyframes cat{
+0% {
+    transform: translateX(-9999px);
+}
+100% {
+    transform: translateY(0);
+    }
+}
+*/
+.page_chargement {
+  position: fixed;
+  background: white;
+  background-repeat: repeat-x;
+  width: 100%;
+  min-height: 500vh;
+  margin: auto;
+  margin-top: -50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  -webkit-animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
+          animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
+  -webkit-transform: opacity 1;
+          transform: opacity 1;
   overflow: hidden;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  z-index: 5;
 }
 
-@-webkit-keyframes cat {
+@-webkit-keyframes disparition {
   0% {
-    -webkit-transform: translateX(-9999px);
-            transform: translateX(-9999px);
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0%;
   }
 }
 
-@keyframes cat {
+@keyframes disparition {
   0% {
-    -webkit-transform: translateX(-9999px);
-            transform: translateX(-9999px);
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    opacity: 0%;
   }
 }
 
@@ -650,6 +683,17 @@ span {
   font-size: 20px;
   overflow: hidden;
   margin-top: 33%;
+}
+
+@-webkit-keyframes cat {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 @keyframes cat {
