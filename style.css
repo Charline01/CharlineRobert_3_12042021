@@ -99,7 +99,7 @@
   color: black;
 }
 .coeur_like .fa-gradient {
-  height: 75px;
+  height: 30px;
 }
 .coeur_like .fa-gradient:hover {
   cursor: pointer;
@@ -529,6 +529,9 @@ footer .tous_les_liens {
 }
 footer .lien_footer {
   margin-left: 5%;
+}
+footer .lien_footer:hover {
+  text-decoration: underline;
 }
 footer #titre_footer {
   font-family: "Shrikhand";

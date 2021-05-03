@@ -22,25 +22,9 @@
 
 @import "./variables";
 
+
+
 // TEST MENU DEROULANT //
-
-
-
-
-@mixin menu__open-accent($dur, $delay) {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: $grisclair;
-    transform-origin: top left;
-    animation: menu $dur $delay both;
-    z-index: -1;
-    border-radius: 30px 30px 0px 0px;
-
-}
 
 .menu {
     min-width: 33vh;
@@ -56,14 +40,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
             
-    
-   // &__open-accent--1{
-   //     @include menu__open-accent(450ms, 275ms);
-   //// }
-    //&__open-accent--2 {
-    //        @include menu__open-accent(450ms, 150ms);
-     //       z-index: -2;
-    //}
+  
     &__item {
 
         background: #fff;
@@ -152,7 +129,7 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
         color: black;
         }
   & .fa-gradient{
-    height:75px;
+    height:30px;
   }
   & .fa-gradient:hover{
             cursor:pointer; 
@@ -679,6 +656,9 @@ footer{
     
     .lien_footer{
         margin-left: 5%;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     
         #titre_footer{
