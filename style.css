@@ -225,8 +225,9 @@
   min-height: 500vh;
   margin: auto;
   margin-top: -50px;
-  -webkit-animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
-          animation: disparition 4s cubic-bezier(0.1, 0.9, 0.1, 1) forwards;
+  padding-top: 300px;
+  -webkit-animation: disparition 4s cubic-bezier(1, 0, 0.99, -0.1) forwards;
+          animation: disparition 4s cubic-bezier(1, 0, 0.99, -0.1) forwards;
   -webkit-transform: opacity 1;
           transform: opacity 1;
   -webkit-animation-iteration-count: 1;
@@ -240,7 +241,7 @@
     z-index: 1;
     opacity: 100%;
   }
-  80% {
+  70% {
     opacity: 100%;
     z-index: 1;
   }
@@ -255,7 +256,7 @@
     z-index: 1;
     opacity: 100%;
   }
-  80% {
+  70% {
     opacity: 100%;
     z-index: 1;
   }

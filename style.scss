@@ -210,9 +210,10 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
     min-height: 500vh;
     margin: auto;
     margin-top: -50px;
-   
+    padding-top: 300px;
 
-    animation: disparition 4s cubic-bezier(.1,.9,.1,1) forwards;
+
+    animation: disparition 4s cubic-bezier(1,0,.99,-0.1) forwards;
     transform: opacity (1);
     
     animation-iteration-count: 1;
@@ -228,7 +229,7 @@ $cat-delay: $prog-bar-dur + $prog-bar-delay*2;
     }
     
 
-    80%{
+    70%{
         opacity: 100%;
         z-index: 1;
     }
