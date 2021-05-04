@@ -46,38 +46,20 @@
         background: #fff;
         animation: menu__item 810ms cubic-bezier(.1,.9,.1,1) both;
         
-        
         &--1 {
-            animation-delay: 500ms;
-            > div {
                 animation-delay: 750ms;
-            }
         }
-        &--2 {
-            animation-delay: 550ms;
-            > div {
+        &--2 
+             {
                 animation-delay: 850ms;
             }
-        }
+        
         &--3 {
-            animation-delay: 650ms;
-            > div {
                 animation-delay: 1000ms;
             }
-        }
     }
 }
 
-@keyframes menu {
-    0% {
-        transform: scaleY(-3);
-    }
-    33% {
-        transform: scaleY(-3);
-        animation-timing-function: cubic-bezier(.73,.01,.2,.99)
-    }
-
-}
 
 @keyframes menu__item {
     0% {
@@ -97,11 +79,6 @@
 
 
 // coeur animation début
-
-$color-secondary:#fa79da;
-$color-primary:#9356dc;
-
-$color-heart:linear-gradient( $color-primary , $color-secondary);
 
 @keyframes backgroundtwo{
     0%{
@@ -134,17 +111,12 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
   & .fa-gradient:hover{
             cursor:pointer; 
             font-weight:bold;
-            
             animation: backgroundtwo 2s  ;
             background:$color-heart;
             -webkit-background-clip: text;
-            
             color: transparent;
         }
-  }        
-      
-
-      
+  }          
 // fin  coeur animation //
 
 .loadspinner{
@@ -152,19 +124,16 @@ $color-heart:linear-gradient( $color-primary , $color-secondary);
     h1{
         width: 100%;
     }
-    text-align: center;
-    align-content: center;
-    position: absolute;
-    overflow: hidden;
-    margin-left: auto;
-    
-    left: 50%;
-    transform: translate(-50%, 40%);
+        text-align: center;
+        align-content: center;
+        position: absolute;
+        overflow: hidden;
+        margin-left: auto;
+        left: 50%;
+        transform: translate(-50%, 40%);
 }
 
-$prog-bar-dur: 1000ms;
-$prog-bar-delay: 150ms;
-$cat-delay: $prog-bar-dur + $prog-bar-delay*2;
+
 
 
 .page_chargement{
@@ -223,12 +192,6 @@ font-size: 50px;
     color: $couleur3;
     font-size:30px;
 }
-
-
-$loader-dot-size: 25px;
-$loader-dot-margin: 20px 20px 20px 0px;
-
-
 
 .loader-dot {
 	width: $loader-dot-size;
@@ -501,11 +464,7 @@ background-color: $grisclair ;
     border-radius: 30px 30px 0px 0px;
     padding: 10px 0px 100px 0px;
     margin-top: -50px;
-    
-    //.fa-heart {
-    //    float: right;
-    //    padding: 20px 20px 50px 50px;
-        
+ 
     }
     
     #titre-menu{
@@ -742,7 +701,7 @@ footer{
 
 @media all and (min-width: 1300px) and (max-width: 4000px) {
     body{
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
 
