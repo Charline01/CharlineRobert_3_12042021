@@ -522,7 +522,6 @@ background-color: $grisclair ;
         }
 
         .btn_checked{
-            border-radius: 0px 15px 15px 0px;
             background-color: $couleurvalide;
             color: white;
             height: 60px;
@@ -530,9 +529,7 @@ background-color: $grisclair ;
             transform: translate(100px);
             overflow: hidden;
             white-space: nowrap;
-            display: inline-block;
-           
-            
+            display: inline-block;            
             }
 
         .choix_assiette{
