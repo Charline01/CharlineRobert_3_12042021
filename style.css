@@ -1,87 +1,51 @@
 @font-face {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   src: url("typo/Shrikhand-Regular.ttf") format("truetype");
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
   src: url("typo/Roboto-Regular.ttf") format("truetype");
 }
-
 @font-face {
-  font-family: 'Roboto-Light';
+  font-family: "Roboto-Light";
   src: url("typo/Roboto-Light.ttf") format("truetype");
 }
-
 @font-face {
-  font-family: 'Roboto-Bold';
+  font-family: "Roboto-Bold";
   src: url("typo/Roboto-Bold.ttf") format("truetype");
 }
-
 .menu {
   min-width: 33vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
   overflow: hidden;
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform-origin: top left;
   position: relative;
-  -webkit-animation: menu 661ms both;
-          animation: menu 661ms both;
+  animation: menu 661ms both;
   z-index: -10;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
 .menu__item {
   background: #fff;
-  -webkit-animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
-          animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
+  animation: menu__item 810ms cubic-bezier(0.1, 0.9, 0.1, 1) both;
 }
-
 .menu__item--1 {
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
+  animation-delay: 750ms;
 }
-
 .menu__item--2 {
-  -webkit-animation-delay: 850ms;
-          animation-delay: 850ms;
+  animation-delay: 850ms;
 }
-
 .menu__item--3 {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
-}
-
-@-webkit-keyframes menu__item {
-  0% {
-    -webkit-transform: translateY(-550%);
-            transform: translateY(-550%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  99.9% {
-    opacity: 20%;
-  }
+  animation-delay: 1000ms;
 }
 
 @keyframes menu__item {
   0% {
-    -webkit-transform: translateY(-550%);
-            transform: translateY(-550%);
+    transform: translateY(-550%);
     opacity: 0;
   }
   50% {
@@ -91,19 +55,6 @@
     opacity: 20%;
   }
 }
-
-@-webkit-keyframes backgroundtwo {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes backgroundtwo {
   0% {
     opacity: 0;
@@ -115,34 +66,27 @@
     opacity: 1;
   }
 }
-
 .coeur_like {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 55px;
   height: 55px;
   padding-right: 10%;
   padding-top: 30px;
   float: right;
 }
-
 .coeur_like .fa-heart {
   position: absolute;
   font-size: 20px;
   color: black;
 }
-
 .coeur_like .fa-gradient {
   height: 30px;
 }
-
 .coeur_like .fa-gradient:hover {
   cursor: pointer;
   font-weight: bold;
-  -webkit-animation: backgroundtwo 2s;
-          animation: backgroundtwo 2s;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  animation: backgroundtwo 2s;
   background: linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   color: transparent;
@@ -150,16 +94,13 @@
 
 .loadspinner {
   text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   position: absolute;
   overflow: hidden;
   margin-left: auto;
   left: 50%;
-  -webkit-transform: translate(-50%, 40%);
-          transform: translate(-50%, 40%);
+  transform: translate(-50%, 40%);
 }
-
 .loadspinner h1 {
   width: 100%;
 }
@@ -173,28 +114,11 @@
   margin: auto;
   margin-top: -50px;
   padding-top: 300px;
-  -webkit-animation: disparition 4s cubic-bezier(1, 0, 0.99, -0.1) forwards;
-          animation: disparition 4s cubic-bezier(1, 0, 0.99, -0.1) forwards;
+  animation: disparition 4s cubic-bezier(1, 0, 0.99, -0.1) forwards;
   opacity: 1;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+  animation-iteration-count: 1;
   z-index: 1;
   overflow: hidden;
-}
-
-@-webkit-keyframes disparition {
-  0% {
-    z-index: 1;
-    opacity: 100%;
-  }
-  70% {
-    opacity: 100%;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0%;
-    z-index: -10;
-  }
 }
 
 @keyframes disparition {
@@ -211,7 +135,6 @@
     z-index: -10;
   }
 }
-
 .loader {
   margin: 100px auto;
   padding: 20px;
@@ -240,34 +163,17 @@
   border-radius: 50%;
   display: inline-block;
   margin: 20px 20px 20px 0px;
-  -webkit-animation: 1s load-spinner infinite;
-          animation: 1s load-spinner infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation: 1s load-spinner infinite;
+  animation-timing-function: ease-in-out;
 }
-
 .loader-dot--one {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
-
 .loader-dot--two {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
-
 .loader-dot--three {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
-@-webkit-keyframes load-spinner {
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation-delay: 0.8s;
 }
 
 @keyframes load-spinner {
@@ -278,25 +184,20 @@
     opacity: 1;
   }
 }
-
 body {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
   margin: auto;
 }
-
 body h1 {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
 }
-
 body h2 {
   font-size: 26px;
-  font-family: 'Roboto-Bold';
+  font-family: "Roboto-Bold";
 }
-
 body h3 {
   font-size: 14px;
 }
-
 body h4 {
   margin: 5px 0px 0px 0px;
   overflow: hidden;
@@ -308,30 +209,22 @@ header {
   background-color: white;
   text-align: center;
 }
-
 header .fa-arrow-left {
   float: left;
   font-size: 20px;
   color: black;
   padding: 15px;
 }
-
 header .fa-arrow-left:hover {
   color: #8f8e8e;
 }
 
 #localisation {
   background-color: #eaeaea;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  justify-content: center;
   display: flex;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
-          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1) inset;
 }
-
 #localisation .fas {
   margin: 15px 30px 0px 0px;
   color: black;
@@ -355,45 +248,31 @@ header .fa-arrow-left:hover {
   padding: 10px;
   margin: 10px;
 }
-
 .titre_fonctionnement h2 {
   padding-left: 10px;
 }
 
 .choix_etape {
   background-color: #f6f6f6;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 25px;
   border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 10px #eaeaea;
-          box-shadow: 5px 5px 10px #eaeaea;
+  box-shadow: 5px 5px 10px #eaeaea;
   height: 50px;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   margin: 20px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .choix_etape .fas {
   color: #8f8e8e;
   margin-right: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .choix_etape .chiffre {
   font-size: 12px;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-items: center;
+  align-content: center;
   color: white;
   width: 15px;
   height: 15px;
@@ -402,11 +281,9 @@ header .fa-arrow-left:hover {
   margin-right: 20px;
   margin-left: -10px;
 }
-
 .choix_etape:hover {
   background-color: #f7ddfa;
 }
-
 .choix_etape:hover .fas {
   color: #9356DC;
 }
@@ -416,38 +293,30 @@ header .fa-arrow-left:hover {
 }
 
 .btn_principal {
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
   font-size: 15px;
   width: 200px;
   margin: auto;
   text-decoration: none;
   text-align: center;
   border-radius: 30px;
-  -webkit-box-shadow: 3px 3px 10px #8f8e8e;
-          box-shadow: 3px 3px 10px #8f8e8e;
+  box-shadow: 3px 3px 10px #8f8e8e;
   margin-top: 50px;
 }
-
 .btn_principal .linear-gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   padding: 15px;
 }
-
 .btn_principal a {
   text-decoration: none;
   color: white;
 }
-
 .btn_principal:hover {
-  -webkit-box-shadow: 3px 3px 10px #474747;
-          box-shadow: 3px 3px 10px #474747;
+  box-shadow: 3px 3px 10px #474747;
 }
-
 .btn_principal:hover .linear-gradient {
-  -webkit-filter: brightness(110%);
-          filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .restaurant_description {
@@ -455,11 +324,8 @@ header .fa-arrow-left:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-items: center;
+  align-content: center;
   margin-right: 35%;
 }
 
@@ -468,31 +334,24 @@ header .fa-arrow-left:hover {
   height: 250px;
   margin-bottom: 15px;
   border-radius: 30px;
-  -webkit-box-shadow: 3px 3px 10px 3px #eaeaea;
-          box-shadow: 3px 3px 10px 3px #eaeaea;
+  box-shadow: 3px 3px 10px 3px #eaeaea;
 }
-
 .carte_restaurant p, .carte_restaurant h4 {
   margin: 10px;
 }
-
 .carte_restaurant .far, .carte_restaurant .logo_nouveau {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   float: right;
   padding-right: 20px;
 }
-
 .carte_restaurant .logo_nouveau {
   background-color: #99E2D0;
   padding: 8px;
   font-size: 12px;
-  font-family: 'Roboto-Bold';
+  font-family: "Roboto-Bold";
   color: #159e70;
   margin: 20px;
 }
-
 .carte_restaurant #la_palette, .carte_restaurant #la_note, .carte_restaurant #la_francaise, .carte_restaurant #le_delice {
   height: 70%;
   background-size: cover;
@@ -500,23 +359,18 @@ header .fa-arrow-left:hover {
   background-position: 30%, 60%;
   border-radius: 30px 30px 0px 0px;
 }
-
 .carte_restaurant #la_palette {
   background-image: url("Maquettes Ohmyfood/images/restaurants/la_palette.jpg");
 }
-
 .carte_restaurant #la_note {
   background-image: url("Maquettes Ohmyfood/images/restaurants/la_note.jpg");
 }
-
 .carte_restaurant #la_francaise {
   background-image: url("Maquettes Ohmyfood/images/restaurants/la_francaise.jpg");
 }
-
 .carte_restaurant #le_delice {
   background-image: url("Maquettes Ohmyfood/images/restaurants/le_delice.jpg");
 }
-
 .carte_restaurant a {
   text-decoration: none;
   color: black;
@@ -530,7 +384,7 @@ header .fa-arrow-left:hover {
 }
 
 #titre-menu {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   font-size: 25px;
   padding: 20px 0px 0px 20px;
 }
@@ -547,16 +401,14 @@ header .fa-arrow-left:hover {
   color: white;
   height: 60px;
   width: 60px;
-  -webkit-transform: translate(100px);
-          transform: translate(100px);
+  transform: translate(100px);
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
 }
 
 .choix_assiette {
-  -webkit-box-shadow: 3px 3px 10px 3px #eaeaea;
-          box-shadow: 3px 3px 10px 3px #eaeaea;
+  box-shadow: 3px 3px 10px 3px #eaeaea;
   background-color: white;
   border-radius: 15px 15px 15px 15px;
   padding: 5px;
@@ -569,7 +421,6 @@ header .fa-arrow-left:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .choix_assiette .prix {
   float: right;
   overflow: hidden;
@@ -578,42 +429,22 @@ header .fa-arrow-left:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
   white-space: nowrap;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  transform: translateX(0px);
+  align-items: center;
+  align-content: center;
 }
-
 .choix_assiette:hover .btn_checked {
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-  -webkit-transition: -webkit-transform 100ms ease-in-out;
-  transition: -webkit-transform 100ms ease-in-out;
+  transform: translate(0px, 0px);
   transition: transform 100ms ease-in-out;
-  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
-
 .choix_assiette:hover .btn_checked .fa-check-circle {
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: rotate(1turn);
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
-
 .choix_assiette:hover .prix {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-  -webkit-transition: -webkit-transform 100ms ease-in-out;
-  transition: -webkit-transform 100ms ease-in-out;
+  transform: translateX(-50px);
   transition: transform 100ms ease-in-out;
-  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
-
 .choix_assiette span {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -622,8 +453,6 @@ header .fa-arrow-left:hover {
 
 span {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   float: right;
   margin: -10px;
@@ -635,28 +464,14 @@ span {
   margin-top: 33%;
 }
 
-@-webkit-keyframes cat {
-  0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
 @keyframes cat {
   0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    transform: translateX(2000px);
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
-
 .la_palette_img_bg, .la_note_img_bg, .le_delice_img_bg, .la_francaise_img_bg {
   height: 300px;
   background-size: cover;
@@ -684,42 +499,31 @@ footer {
   padding-top: 50px;
   background-color: #474747;
   color: white;
-  font-family: 'Roboto-Regular';
+  font-family: "Roboto-Regular";
 }
-
 footer p {
   padding: 0px;
 }
-
 footer .tous_les_liens {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 footer .lien_footer {
   margin-left: 5%;
 }
-
 footer .lien_footer:hover {
   text-decoration: underline;
 }
-
 footer #titre_footer {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   margin-left: 5%;
   font-size: 24px;
   padding-bottom: 20px;
 }
-
 footer .fas {
   float: left;
   margin-right: 20px;
 }
-
 footer a {
   text-decoration: none;
   color: white;
@@ -731,11 +535,13 @@ footer a {
     width: 100%;
     margin: auto;
   }
+
   #menu_complet {
     width: 50%;
     margin: auto;
     padding-top: 20px;
   }
+
   #menu_entier {
     overflow: hidden;
   }
@@ -747,152 +553,126 @@ footer a {
     margin: 10px auto;
     padding: 10px;
   }
+
   #fonctionnement-liste {
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
     width: 40%;
     margin: auto;
   }
+
   .choix_etape {
     margin: 20px auto;
     padding: 0px;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
   }
+
   .tous_les_liens {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2%;
     margin-left: 10%;
     margin-right: 5%;
   }
+
   #titre_footer {
     text-align: center;
   }
 }
-
 /*----------------RESPONSIVE PC ----------------------*/
 @media all and (min-width: 1300px) and (max-width: 4000px) {
   body {
     width: 80%;
     margin: auto;
   }
+
   #menu_entier .sous-titre-menu {
     margin: auto;
   }
   #menu_entier .choix_assiette {
     margin: 30px auto;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     width: auto;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
     transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 3s;
-            transition-duration: 3s;
+    transition-duration: 3s;
     width: auto;
   }
   #menu_entier .choix_assiette:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
+
   .carte_restaurant {
     height: 350px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
+    transform: scale(1);
     transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    transition-duration: 0.5s;
   }
   .carte_restaurant:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
   .carte_restaurant .restaurant_description {
     width: 50%;
     margin: auto;
     padding-top: 20px;
   }
+
   .choix_etape {
     margin: auto;
     width: 100%;
     padding: 0px;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
     padding-right: 30px;
     margin-right: 50px;
     align-items: center;
   }
   .choix_etape .fas {
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
   }
+
   #fonctionnement-liste {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: 90%;
   }
+
   #fonctionnement_site {
     margin: 50px 0px 50px 0px;
   }
+
   .liste_restaurant {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (2fr)[2];
-        grid-template-columns: repeat(2, 2fr);
-    -webkit-column-gap: 30px;
-            column-gap: 30px;
+    grid-template-columns: repeat(2, 2fr);
+    column-gap: 30px;
     row-gap: 30px;
   }
+
   #menu_complet {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -webkit-column-gap: 50px;
-            column-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
     margin: auto;
     margin-top: 50px;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     width: 90%;
     padding-top: 50px;
     margin-left: 5%;
     margin-right: 5%;
   }
+
   .tous_les_liens {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2%;
     margin-left: 10%;
     margin-right: 5%;
   }
+
   #titre_footer {
     text-align: center;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
