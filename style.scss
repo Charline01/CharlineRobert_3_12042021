@@ -60,7 +60,6 @@
     }
 }
 
-
 @keyframes menu__item {
     0% {
         transform: translateY(-550%);
@@ -395,9 +394,6 @@ background-color: $grisclair ;
     margin:auto;
     align-items: center;
     align-content: center;
-    margin-right: 35%;
-
-    
 }
 
 
@@ -652,7 +648,6 @@ footer{
         #menu_entier{
             overflow: hidden;
 
-
             .sous-titre-menu{
                 padding-top: 20px;
             }
@@ -681,8 +676,6 @@ footer{
 
         }
 
-
-
 .tous_les_liens{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -693,6 +686,12 @@ footer{
 
 #titre_footer{
     text-align: center;
+}
+
+.restaurant_description{
+    margin-right: 35%;
+    margin: auto;
+    width: 50%;
 }
 
 }

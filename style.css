@@ -326,7 +326,6 @@ header .fa-arrow-left:hover {
   margin: auto;
   align-items: center;
   align-content: center;
-  margin-right: 35%;
 }
 
 .carte_restaurant {
@@ -578,6 +577,12 @@ footer a {
 
   #titre_footer {
     text-align: center;
+  }
+
+  .restaurant_description {
+    margin-right: 35%;
+    margin: auto;
+    width: 50%;
   }
 }
 /*----------------RESPONSIVE PC ----------------------*/
