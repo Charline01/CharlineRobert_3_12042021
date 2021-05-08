@@ -320,12 +320,13 @@ header .fa-arrow-left:hover {
 }
 
 .restaurant_description {
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: auto;
   align-items: center;
   align-content: center;
+  overflow: hidden;
+  padding-right: 20%;
 }
 
 .carte_restaurant {

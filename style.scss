@@ -137,7 +137,7 @@
 
 .page_chargement{
     position: fixed;
-    background: white;
+    background: rgb(255, 255, 255);
     background-repeat:repeat-x;
     width: 100%;
     min-height: 500vh;
@@ -388,12 +388,14 @@ background-color: $grisclair ;
 
 
 .restaurant_description{
-    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin:auto;
     align-items: center;
     align-content: center;
+    overflow: hidden;
+    padding-right: 20%;
+
 }
 
 
